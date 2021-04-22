@@ -1,0 +1,175 @@
+/* Window styles */
+window[guid] {
+  box-shadow: 0px 0px 20px -6px #000;
+}
+
+window[guid][inactive=false] {
+  box-shadow: 0px 0px 20px -4px #000;
+}
+
+.titleBar_right, .titleBar_left {
+  width: 0px;
+}
+
+.titleBar_middle, window[inactive=true] .titleBar_middle {
+  padding-left: 6px;
+  background-image: none;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.windowTitle {
+  color: #000000;
+  text-shadow: none;
+}
+
+.windowTitle.inactive {
+  color: #888888;
+}
+
+.close, .minimize, .maximize, .restore {
+  height: 30px;
+  width: 30px;
+  top: 0 !important;
+  right: 0 !important;
+  background-color: rgba(255, 255, 255, 0.36);
+  transition: background-color 0.1s linear;
+  background-position: center;
+}
+
+.close, .close:hover, window[inactive=true] .close, .close:active {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gMJAQ4HrNX3aQAAAD1JREFUGNNjYGBg+M/AwGDEgBsYQdUwGDGwcP/BoRhDDptinAYgS+CzBUkxFkVMDGQAoqwmyjNEBw9RAQ4Apr8YdbfJcvIAAAAASUVORK5CYII=) !important;
+}
+
+.minimize, .minimize:hover, window[inactive=true] .minimize, .minimize:active {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gMJAQ4y+mYzSgAAAC9JREFUGNNjYCAJsHCTIIdNMU4DkCXw2QJXgEURIwMDw38GkgFRVhPlGZKChwAAAHUNAdPybB9kAAAAAElFTkSuQmCC) !important;
+}
+
+.maximize, .maximize:hover, window[inactive=true] .maximize, .maximize:active {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gMJAQ4az9ObsAAAADxJREFUGNNjZGBg+M9AJPjPwMKNWxYi9x9OYFWMEENSiK4YVSOaQpgCTNP/MzGQAEi0mijPEBE8jMQGOACoFRDHqVqA9wAAAABJRU5ErkJggg==) !important;
+}
+
+.restore, .restore:hover, window[inactive=true] .restore .restore:active {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gMJARAJnyzlsQAAAHdJREFUGNOFkEEOgCAMBKfIzbvhYTxT/4UP0JNaDxVFxbhJaZOS7e4KGeIUlC94e1tYZ0KnDWN8fUoyrMYkooD1RwWiQ0Q96MWkNaby9BhJ9NspA2CZAHloLLFMVTPubq2tzxbLIfi1sF026v9OXpFVIimZAtEB7IogMr9ouZe3AAAAAElFTkSuQmCC) !important;
+}
+
+.minimize:hover, .maximize:hover, .restore:hover {
+  background-color: #1883d7;
+}
+
+.close:hover {
+  background-color: #ef452b;
+}
+
+.windowBody {
+  border: 4px solid rgba(255, 255, 255, 0.64);
+  border-top: none;
+  border-image: none !important;
+  background-clip: padding-box;
+}
+
+button {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-image: none;
+  background-color: #ffffff;
+  border: 1px solid #bfbfbf;
+  /*margin: 0;*/
+}
+
+button:hover {
+  border-color: #96c1e4;
+  background-image: none;
+}
+
+button:active {
+  border-color: #729fc3;
+  background-color: #c8e6ff;
+  background-image: none !important;
+}
+
+button:focus {
+  background-image: none;
+}
+
+button::before, button::after {
+  width: 0;
+  background: none;
+}
+
+taskbar {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+button.start {
+  font-size: 14px;
+  background-image: none;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.1s linear;
+  color: #000000;
+}
+
+button.start:hover {
+  background-image: none !important;
+  background-color: #ffffff;
+}
+
+button.start:active, button.start[isopen=true] {
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.clock {
+  margin: 0;
+  height: 30px;
+  border: none;
+  line-height: 30px;
+}
+
+.clock::before, .clock::after {
+  width: 0;
+  background-image: none;
+}
+
+windowbutton {
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.64);
+  transition: background-color 0.1s linear;
+  margin: 0;
+  line-height: 30px;
+  vertical-align: top;
+  color: #000000;
+  padding-left: 6px;
+}
+
+windowbutton, windowbutton:hover, windowbutton[inactive=true] {
+  background-image: none !important;
+}
+
+windowbutton[inactive=true] {
+  background-color: rgba(255, 255, 255, 0.48);
+}
+
+windowbutton:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+windowbutton::before, windowbutton::after {
+  width: 0;
+  background: none;
+}
+
+.startmenu_top, .startmenu_middle, .startmenu_bottom {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.64);
+}
+
+.startmenu_middle {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.startmenu_username {
+  color: #000000;
+  text-shadow: none;
+}
