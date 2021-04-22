@@ -19,7 +19,7 @@ var scripts = [
   'uac.js',
   'audio.js',
   'lambda.js',
-  '//xp-js-appstore.glitch.me/appstore.js',
+  '//xpstore.glitch.me/appstore.js',
   'boot.js'
 ];
 var stylesheets = [
