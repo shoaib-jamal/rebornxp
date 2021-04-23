@@ -19,7 +19,7 @@ var scripts = [
   'uac.js',
   'audio.js',
   'lambda.js',
-  '//xpstore.glitch.me/appstore.js',
+  '//rebornxp.github.io/xpstore/public/appstore.js',
   'boot.js'
 ];
 var stylesheets = [
