@@ -15,7 +15,7 @@ I always remembered the nostalgic feeling of Windows XP which is now discontinue
 You are free to open issues and send pull requests.
 
 # Credits
-The whole OS, including code & design is by me. Only few assets are taken from third-party sites which I have attributed:
+Assets are taken from third-party sites which I have attributed:
 
 - Filetypes icons are taken from the [Modern XP Iconset](https://www.deviantart.com/eatosdesign/art/Modern-XP-icons-449891585)
 - Wallpaper is taken from [Wallpaper Flare](https://www.wallpaperflare.com/green-grass-under-blue-skies-wallpaper-bliss-minimalism-windows-xp-wallpaper-huxp)
