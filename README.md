@@ -10,9 +10,13 @@ I always remembered the nostalgic feeling of Windows XP which is now discontinue
 - New themes
 - User Accounts
 - Browser Storage
+# Planned Features
+- Sign in and save OS data in google accounts
+- Add more apps
+- Redesign the Start Menu
 
 #  Contributing
-You are free to open issues and send pull requests.
+You are free to open issues and send pull requests. If you are a developer & want to publish your web app to the App Store, mail me or dm me on Instagram: @shoaib.cy
 
 # Credits
 Assets are taken from third-party sites which I have attributed:
