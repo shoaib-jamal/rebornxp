@@ -10,8 +10,10 @@ I always remembered the nostalgic feeling of Windows XP which is now discontinue
 - New themes
 - User Accounts
 - Browser Storage
+- Upload Local files from host OS to RebornXP
+- Download RebornXP files to host OS
 # Planned Features
-- Sign in and save OS data in google accounts
+- Save OS data directly into google accounts
 - Add more apps
 - Redesign the Start Menu
 
