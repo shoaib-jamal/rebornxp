@@ -18,7 +18,7 @@ I always remembered the nostalgic feeling of Windows XP which is now discontinue
 - Redesign the Start Menu
 
 #  Contributing
-You are free to open issues and send pull requests. You can donate me & support the project by Sponsoring it - On Patreon<br>If you are a developer & want to publish your web app to the App Store, mail me or dm me on Instagram: @shoaib.cy
+You are free to open issues and send pull requests. You can donate me & support the project by Sponsoring it - On Patreon<br>If you are a developer & want to publish your web app to the App Store, [click here](https://github.com/RebornXP/app-guide)
 
 # Credits
 Assets are taken from third-party sites which I have attributed:
