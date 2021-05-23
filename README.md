@@ -23,8 +23,8 @@ You are free to open issues and send pull requests. You can donate me & support 
 # Credits
 Assets are taken from third-party sites which I have attributed:
 
-- Filetypes icons are taken from the [Modern XP Iconset](https://www.deviantart.com/eatosdesign/art/Modern-XP-icons-449891585)
-- Wallpaper is taken from [Wallpaper Flare](https://www.wallpaperflare.com/green-grass-under-blue-skies-wallpaper-bliss-minimalism-windows-xp-wallpaper-huxp)
+- Filetypes icons from the [Modern XP Iconset](https://www.deviantart.com/eatosdesign/art/Modern-XP-icons-449891585)
+- Wallpaper from [Wallpaper Flare](https://www.wallpaperflare.com/green-grass-under-blue-skies-wallpaper-bliss-minimalism-windows-xp-wallpaper-huxp)
 
 # Disclaimer
 The Windows XP name, artwork, trademark are surely property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.
