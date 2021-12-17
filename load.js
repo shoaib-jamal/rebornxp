@@ -103,7 +103,7 @@ $(function() {
               var event = new Event('xpboot');
               window.dispatchEvent(event);
               console.log('Dispatched boot event');
-              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://wallpaperaccess.com/full/2607279.jpg"/></div>');
+              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://img.wallpapersafari.com/desktop/1680/1050/47/80/wXqMrd.jpg"/></div>');
               $.getScript('login.js');
               xp.audio.playURL('https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FWindows%20XP%20Startup.wav?1522620562681');
             }
@@ -118,7 +118,7 @@ $(function() {
                 dirReader.readEntries (function(results) {
                   if (results.length === 0) {
                     $('._ui_boot').remove();
-                    $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://wallpaperaccess.com/full/2607279.jpg"/></div>');
+                    $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://img.wallpapersafari.com/desktop/1680/1050/47/80/wXqMrd.jpg"/></div>');
                     $.getScript('setup.js');
                   } else {
                     xp.filesystem.createDir('/WINDOWS', (e) => {
