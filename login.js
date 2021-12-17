@@ -28,7 +28,7 @@ xp.filesystem.fs.root.getDirectory('/Documents and Settings', {create: false}, f
         } else {
           var win = new Window({
               width: 594,
-              height: 434,
+              height: 300,
               title: 'Welcome to RebornXP',
               canClose: false,
               canResize: false,
