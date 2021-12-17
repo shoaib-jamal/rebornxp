@@ -27,7 +27,7 @@ win.content(`
 }
 </style>
 <div style="margin-left:32px;">
-    <h1 style="font-weight:normal;">Welcome to RebornXP!</h1>
+    <h1 style="font-weight:normal;">Thanks for using RebornXP!</h1>
     <h2 style="font-weight:normal;">Choose a user name and picture</h2>
     <p>
         Your user name and picture represent your user account. The account you create here is a computer<br>
