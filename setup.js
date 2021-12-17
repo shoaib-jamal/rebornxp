@@ -27,7 +27,7 @@ win.content(`
 }
 </style>
 <div style="margin-left:32px;">
-    <h1 style="font-weight:normal;">Thanks for using RebornXP!</h1>
+    <h1 style="font-weight:normal;">Thanks for choosing RebornXP!</h1>
     <h2 style="font-weight:normal;">Choose a user name and picture</h2>
     <p>
         Your user name and picture represent your user account. The account you create here is a computer<br>
@@ -79,7 +79,7 @@ win.el.find('.next').on('click', function() {
         xp.profile.image = win.el.find('.userimgopt.selected').attr('src');
         xp.profile.name = win.el.find('.username').val();
         configFile = `/Documents and Settings/${xp.profile.name}/config.json`;
-        xp.wallpaper.href = 'https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FBliss.jpg?1519950052202';
+        xp.wallpaper.href = 'https://www.hdwallpapers.in/download/artistic_landscape_minimalist_windows_xp_4k_hd_windows_xp-3840x2160.jpg';
         win.content(`
 <div style="margin-left:32px;">
     <h1 style="font-weight:normal;">Please wait while we set up your computer.</h1>
