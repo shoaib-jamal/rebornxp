@@ -180,7 +180,7 @@ td._ui_td {
 
 ._ui_wallpaper_image {
   max-width:100%;
-	height:auto;
+	height:100%;
   z-index: inherit;
   position: fixed;
   top: 50%;
