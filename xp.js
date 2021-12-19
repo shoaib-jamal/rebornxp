@@ -310,15 +310,21 @@ $.fn.initWindows = function() {
             <li class="startmenuitem" onclick="openApp('winhelp')">
               <img src="` + xp.startmenu.icons.help + `"/>
               <div><div>
-                <b>Help and Support</b>
+                <b>About RebornXP</b>
               </div></div>
             </li>
+
+
+            <!--Search is under Development-->
             <li class="startmenuitem" onclick="">
               <img src="` + xp.startmenu.icons.search + `"/>
               <div><div>
                 <b>Search</b>
               </div></div>
             </li>
+            <!--Feel free to contribute to this Section-->
+
+            
             <li class="startmenuitem" onclick="runAppDialog()">
               <img src="` + xp.startmenu.icons.run + `"/>
               <div><div>
