@@ -22,7 +22,7 @@ function iframeContentLoaded(guid) {
 $(window).on('xpboot', function() {
   xp.applications.add('browser', (args) => {
       var guid = generate_guid();
-      var el = $.parseHTML(`<window title="Open IE" width="640" height="480">
+      var el = $.parseHTML(`<window title="Internet Explorer" width="640" height="480">
         <style>
     .load-overlay {
       position: absolute;
