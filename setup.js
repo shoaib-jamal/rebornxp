@@ -79,7 +79,7 @@ win.el.find('.next').on('click', function() {
         xp.profile.image = win.el.find('.userimgopt.selected').attr('src');
         xp.profile.name = win.el.find('.username').val();
         configFile = `/Documents and Settings/${xp.profile.name}/config.json`;
-        xp.wallpaper.href = 'https://www.hdwallpapers.in/download/artistic_landscape_minimalist_windows_xp_4k_hd_windows_xp-3840x2160.jpg';
+        xp.wallpaper.href = 'https://rebornxp.js.org/XP.jpg';
         win.content(`
 <div style="margin-left:32px;">
     <h1 style="font-weight:normal;">Please wait while we set up your computer.</h1>
