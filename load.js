@@ -19,6 +19,7 @@ var scripts = [
   'uac.js',
   'audio.js',
   'lambda.js',
+  'minesweeper.js'
   '//xpstore.glitch.me/appstore.js',
   'boot.js'
 ];
