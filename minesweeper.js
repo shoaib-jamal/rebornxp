@@ -26,5 +26,5 @@ iframe[seamless]{
     document.body.appendChild(el[0]);
     $(el).updateWindow();
   });
-    xp.startmenu.add('minesweeper', 'Minesweeper', '//cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fnotepad.png?1521328884236');
+    xp.startmenu.add('minesweeper', 'Minesweeper', 'https://w7.pngwing.com/pngs/337/559/png-transparent-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game-angle.png');
 });
