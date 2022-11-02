@@ -131,7 +131,7 @@ function desktopContextMenu(e) {
 	  rcContextMenu();
   } else if (el.closest('.ui_icon').length > 0) {
     el = el.closest('.ui_icon');
-    vContextMenu = Array('<b>Open</b>', () => eval(el.data('exe')), 'Explore', () => openLocation(el.data('target')), '-HR-', 'Create Shortcut', '', 'Delete',() => el.remove(), 'Rename', () => xp.prompt('Rename', 'Enter the new name:', (t) => {el.find('span').html(t)}), '-HR-', 'Properties', 'fShowWindow(\'Computer-Properties\');');
+    vContextMenu = Array('<b>Open</b>', () => eval(el.data('exe')), 'Explore', () => openLocation(el.data('target')), '-HR-', 'Create Shortcut', '', 'Delete',() => el.remove(), 'Rename', () => xp.prompt('Rename', 'Enter the new name:', (t) => {el.find('span').html(t)}), '-HR-');
     rcContextMenu();
   }
 }
@@ -191,6 +191,6 @@ function startContextMenu(e) {
   if (!(el.is('li.startmenuitem') || el.is('li.startmenuitem>img') || el.is('li.startmenuitem>div') || el.is('li.startmenuitem>div>div') || el.is('li.startmenuitem>div>div>b'))) return;
   if (!el.is('li.startmenuitem'))
     el = el.closest('li');
-  vContextMenu = Array('<b>Open</b>', el.attr('onclick'), 'Explore', el.attr('onclick'), '-HR-', 'Create Shortcut', '', 'Delete',() => el.remove(), 'Rename', () => xp.prompt('Rename', 'Enter the new name:', (t) => {el.find('div>div>b').html(t)}), '-HR-', 'Properties', 'fShowWindow(\'Computer-Properties\');');
+  vContextMenu = Array('<b>Open</b>', el.attr('onclick'), 'Explore', el.attr('onclick'), '-HR-', 'Create Shortcut', '', 'Delete',() => el.remove(), 'Rename', () => xp.prompt('Rename', 'Enter the new name:', (t) => {el.find('div>div>b').html(t)}), '-HR-');
   rcContextMenu();
 }
