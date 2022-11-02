@@ -1,5 +1,6 @@
 RebornXP
 ===
+[![pages-build-deployment](https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment)
 
 RebornXP is an effort to bring back the late 2000's personal computing experience right to your desktop, but in a moden way.
 
