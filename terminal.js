@@ -52,7 +52,10 @@ $(window).on('xpboot', () => {
                   } else if (args[0] === "cat") {
                     xp.filesystem.readFile(xp.filesystem.addPaths(xp.filesystem.getDir(this.dir), args[1]), function(e){if(e){term.echo(e)}});
                   } else if (args[0] === "help") {
-                    this.echo("RebornXP &copy; 2021 - Shoaib");
+                    this.echo("DE: XPerience");
+                    this.echo("Kernel: RXP vOS.2022");
+                    this.echo("Shell: JQuery Terminal");
+                    this.echo("GitHub: github.com/RebornXP");
                     this.echo("\nInstalled applications:");
                     var foo = "";
                     for (var name in xp.applications.apps) {
@@ -60,7 +63,7 @@ $(window).on('xpboot', () => {
                     }
                     foo = foo.slice(0, -2);
                     this.echo(foo);
-                    this.echo("\nBuilt-in commands:");
+                    this.echo("\nSystem commands:");
                     this.echo("ls, cd, pwd, touch, rm, mkdir, rmdir, cat, help");
                   } else if (xp.applications.apps[args[0]] !== undefined) {
                     xp.applications.apps[args[0]]([xp.filesystem.getDir(this.dir)].concat(args.slice(1)));
@@ -78,8 +81,8 @@ $(window).on('xpboot', () => {
             }
         }, {
             greetings: `
-    RebornXP
-    © 2021 - Shoaib
+    RebornXP [vOS.2022]
+    (c) RebornXP Open-Source Project. All rights reserved.
 `,
             name: 'xpjs_terminal',
             width: '100%',
