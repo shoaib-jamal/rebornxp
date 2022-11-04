@@ -11,7 +11,7 @@ var xp = {
       delete xp.applications.apps[name];
     }
   },
-  themes: ['default', 'classic', 'crystal', 'silver', 'vista'],
+  themes: ['crystal', 'classic', 'default', 'silver', 'vista'],
   theme: {
     name: 'default',
     set: function(name) {
