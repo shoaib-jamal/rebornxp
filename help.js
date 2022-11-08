@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('winhelp', () => {
-    var el = $.parseHTML(`<window width="640" height="500" title="About">
+    var el = $.parseHTML(`<window width="640" height="520" title="Help">
       <style>
         .docs_container {
           overflow: scroll;
