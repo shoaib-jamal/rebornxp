@@ -21,7 +21,7 @@ I always remembered the nostalgic feeling of Windows XP which is now discontinue
 - Redesign the Taskbar with more items such as network, sound e.t.c)
 
 #  Contributing
-You are free to open issues and send pull requests. You can donate me & support the project by Sponsoring it on Patreon<br>If you are a developer & want to publish your web app to the App Store, [click here](https://github.com/shoaib-jamal/app-guide)
+You are free to open issues and send pull requests - I'll happily merge them.<br>If you are a developer & want to publish your web app to the App Store, [click here](https://github.com/shoaib-jamal/app-guide)
 
 # Disclaimer
 The Windows XP name, artwork, trademark are surely property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.
