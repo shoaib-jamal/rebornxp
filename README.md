@@ -3,8 +3,6 @@ RebornXP
 [![pages-build-deployment](https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment)
 
 RebornXP is an effort to bring back the late 2000's personal computing experience right to your desktop, but in a moden way.
-
-I always remembered the nostalgic feeling of Windows XP which is now discontinued and unfortunately gone from everyone's heart, so I decided to continue this project. It is highly inspired from the metro design of Windows 10.
 <br><br>
 <img src="xpthrives.jpg"><br>
 
