@@ -53,9 +53,9 @@ $(window).on('xpboot', () => {
                     xp.filesystem.readFile(xp.filesystem.addPaths(xp.filesystem.getDir(this.dir), args[1]), function(e){if(e){term.echo(e)}});
                   } else if (args[0] === "help") {
                     this.echo("DE: XPerience");
-                    this.echo("Kernel: RXP vOS.2022");
+                    this.echo("Kernel: RXP vOS.2023");
                     this.echo("Shell: JQuery Terminal");
-                    this.echo("GitHub: github.com/RebornXP");
+                    this.echo("GitHub: github.com/shoaib-jamal/RebornXP");
                     this.echo("\nInstalled applications:");
                     var foo = "";
                     for (var name in xp.applications.apps) {
@@ -81,7 +81,7 @@ $(window).on('xpboot', () => {
             }
         }, {
             greetings: `
-    RebornXP [vOS.2022]
+    RebornXP [vOS.2023]
     (c) RebornXP Open-Source Project. All rights reserved.
 `,
             name: 'xpjs_terminal',
