@@ -50,7 +50,7 @@ $(function() {
   </center>
 </div>`);
   console.log('Loading scripts and stylesheets...');
-  $('<link/>', {rel: 'stylesheet', href: 'boot.css'}).appendTo('head');
+  $('<link/>', {rel: 'stylesheet', href: 'boot/boot.css'}).appendTo('head');
   var scriptsindex = 0;
   var stylesindex = 0;
   
