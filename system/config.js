@@ -20,11 +20,11 @@ function loadConfig(callback) {
     try {
       config = JSON.parse(text);
       console.log(config);
-      xp.wallpaper.set('https://rebornxp.js.org/XP.jpg');
+      xp.wallpaper.set('https://rebornxp.js.org/system/themes/XP.jpg');
       xp.profile = config.profile;
       xp.theme.set('crystal');
     } catch(e) {
-      xp.wallpaper.set('https://rebornxp.js.org/XP.jpg');
+      xp.wallpaper.set('https://rebornxp.js.org/system/themes/XP.jpg');
       loadingconfig = false;
       saveConfig();
     }
