@@ -17,7 +17,7 @@ var xp = {
     set: function(name) {
       xp.theme.name = name;
       if (xp.theme.name !== 'default') {
-        $('#theme').attr('href', 'themes/' + xp.theme.name + '.css');
+        $('#theme').attr('href', 'system/themes/' + xp.theme.name + '.css');
       } else {
         $('#theme').attr('href', '');
       }
