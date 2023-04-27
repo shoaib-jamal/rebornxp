@@ -174,9 +174,9 @@ xp.filesystem.basename = function(str) {
 
 xp.filesystem.create = function(size, callback, ignoreerrors) {
   console.log('Loading idb.filesystem.min.js');
-  xp.filesystem.type = 'idb.filesystem.js';
+  xp.filesystem.type = 'system/idb.filesystem.js';
   $.getScript(
-    'idb.filesystem.min.js',
+    'system/idb.filesystem.min.js',
     () => {
       window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
       window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;

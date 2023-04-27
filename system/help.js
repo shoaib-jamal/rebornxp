@@ -18,7 +18,7 @@ $(window).on('xpboot', () => {
         <p>This is just a hobby and Open Source Project, and there are not many people to support its development, so it lacks some good features.</p>
         <p>RebornXP is open source, and I would love to accept forks and pull requests on <a href="https://github.com/shoaib-jamal/reborn-xp">GitHub</a></p>
         <p>You are free to use RebornXP, or parts of RebornXP in your projects.</p>
-        <img src="xpthrives.jpg" width="50%" height="50%">
+       
         <p><b>Disclamier:<br>The Windows XP name, artwork, trademark are surely property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.</p></b>
       </div>
     </window>`);

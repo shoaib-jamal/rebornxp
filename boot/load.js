@@ -1,40 +1,40 @@
 var scripts = [
-  'core.js',
-  'window-api.js',
-  'contextmenus.js',
-  'filesystem.js',
-  'xp.js',
-  'jquery.terminal-2.0.0.min.js',
-  'unix_formatting.js',
-  'terminal.js',
-  'script.js',
-  'explorer.js',
-  'help.js',
-  'browser.js',
-  'notepad.js',
-  'imageviewer.js',
-  'mediaplayer.js',
-  'config.js',
-  'controlpanel.js',
-  'uac.js',
-  'audio.js',
-  'lambda.js',
-  'minesweeper.js',
+  'system/core.js',
+  'system/window-api.js',
+  'system/contextmenus.js',
+  'system/filesystem.js',
+  'system/xp.js',
+  'system/jquery.terminal-2.0.0.min.js',
+  'system/unix_formatting.js',
+  'program/terminal.js',
+  'system/script.js',
+  'system/explorer.js',
+  'system/help.js',
+  'program/browser.js',
+  'program/notepad.js',
+  'program/imageviewer.js',
+  'program/mediaplayer.js',
+  'system/config.js',
+  'system/controlpanel.js',
+  'system/uac.js',
+  'system/audio.js',
+  'system/lambda.js',
+  'program/minesweeper.js',
   '//xpstore.glitch.me/appstore.js',
-  'boot.js'
+  'boot/boot.js'
 ];
 var stylesheets = [
-  'fonts.css',
-  'xp.css',
-  'icons.css',
-  'widgets.css',
-  'window.css',
-  'contextmenus.css',
-  'cursors.css',
-  'desktop.css',
-  'startmenu.css',
-  'explorer.css',
-  'jquery.terminal-2.0.0.min.css'
+  'system/fonts.css',
+  'system/xp.css',
+  'system/icons.css',
+  'system/widgets.css',
+  'system/window.css',
+  'system/contextmenus.css',
+  'system/cursors.css',
+  'system/desktop.css',
+  'system/startmenu.css',
+  'system/explorer.css',
+  'system/jquery.terminal-2.0.0.min.css'
 ];
 var requiredDirectories = [];
 
@@ -105,7 +105,7 @@ $(function() {
               window.dispatchEvent(event);
               console.log('Dispatched boot event');
               $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://i.redd.it/p0j4iwha2q351.png"/></div>');
-              $.getScript('login.js');
+              $.getScript('system/login.js');
               xp.audio.playURL('https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FWindows%20XP%20Startup.wav?1522620562681');
             }
           }
@@ -120,7 +120,7 @@ $(function() {
                   if (results.length === 0) {
                     $('._ui_boot').remove();
                     $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://i.redd.it/p0j4iwha2q351.png"/></div>');
-                    $.getScript('setup.js');
+                    $.getScript('setup/setup.js');
                   } else {
                     xp.filesystem.createDir('/WINDOWS', (e) => {
                       requiredDirectories = [
