@@ -104,7 +104,7 @@ $(function() {
               var event = new Event('xpboot');
               window.dispatchEvent(event);
               console.log('Dispatched boot event');
-              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="https://i.redd.it/p0j4iwha2q351.png"/></div>');
+              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="boot/assets/welcome.png"/></div>');
               $.getScript('system/login.js');
               xp.audio.playURL('https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FWindows%20XP%20Startup.wav?1522620562681');
             }
