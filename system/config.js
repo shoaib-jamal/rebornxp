@@ -22,7 +22,7 @@ function loadConfig(callback) {
       console.log(config);
       xp.wallpaper.set('https://rebornxp.js.org/system/themes/XP.jpg');
       xp.profile = config.profile;
-      xp.theme.set('crystal');
+      xp.theme.set('reborn');
     } catch(e) {
       xp.wallpaper.set('https://rebornxp.js.org/system/themes/XP.jpg');
       loadingconfig = false;
