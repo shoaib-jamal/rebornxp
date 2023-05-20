@@ -16,12 +16,12 @@ body {
   margin: -75px 0 0 -63px;
 }
 ._ui_boot_winlogo {
-  background-image: url("boot/assets/logo.png");
+  background-image: url("assets/logo.png");
   width: 118px;
   height: 104px;
 }
 ._ui_boot_progress {
-  background-image: url("boot/assets/progress.gif");
+  background-image: url("assets/progress.gif");
   width: 126px;
   height: 15px;
   position: absolute;
