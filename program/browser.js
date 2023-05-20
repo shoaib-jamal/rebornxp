@@ -22,7 +22,7 @@ function iframeContentLoaded(guid) {
 $(window).on('xpboot', function() {
   xp.applications.add('browser', (args) => {
       var guid = generate_guid();
-      var el = $.parseHTML(`<window title="Internet Exploder" width="800" height="600">
+      var el = $.parseHTML(`<window title="Internet Exploder" width="800" height="500">
         <style>
     .load-overlay {
       position: absolute;
@@ -49,8 +49,8 @@ $(window).on('xpboot', function() {
 
         <div id="webBrowserContent">
           <button align="left" id="homeButton" onclick="browserGo('www.bing.com', '` + guid + `')" title="Home">Home</button>
-                            <button align="left" id="homeButton" onclick="browserGo('www.google.com/?igu=1', '` + guid + `')" title="Google">Google</button>
-                            <button align="left" id="homeButton" onclick="browserGo('www.wikipedia.com', '` + guid + `')" title="Wikipedia">Wikipedia</button>
+                            <button align="left" onclick="browserGo('www.google.com/?igu=1', '` + guid + `')" title="Google">Google</button>
+                            <button align="left" onclick="browserGo('www.wikipedia.com', '` + guid + `')" title="Wikipedia">Wikipedia</button>
           <button align="left" id="videoButton" onclick="browserGo('www.bing.com/videos', '` + guid + `')" title="Videos">Videos</button>
           <button align="left" id="imageButton" onclick="browserGo('www.bing.com/images', '` + guid + `')" title="Images">Images</button>
           <input type="text" id="url_` + guid + `" value="` + location.protocol + `//www.bing.com/" style="width:calc(100% - 314px);"/>
@@ -73,7 +73,7 @@ $(window).on('xpboot', function() {
   });
 
   xp.applications.add('html', (args) => {
-    var el = $.parseHTML(`<window title="` + args[1] + `" width="800" height="600">
+    var el = $.parseHTML(`<window title="` + args[1] + `" width="800" height="500">
     <style>
       iframe[seamless]{
         background-color: transparent;
