@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('minesweeper', () => {
-    var el = $.parseHTML(`<window width="300" height="500" title="Minesweeper">
+    var el = $.parseHTML(`<window width="300" height="410" title="Minesweeper">
       <style>
 iframe[seamless]{
   background-color: transparent;
