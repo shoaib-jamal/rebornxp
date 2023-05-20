@@ -53,7 +53,7 @@ $(window).on('xpboot', function() {
                             <button align="left" onclick="browserGo('www.wikipedia.com', '` + guid + `')" title="Wikipedia">Wikipedia</button>
           <button align="left" id="videoButton" onclick="browserGo('www.bing.com/videos', '` + guid + `')" title="Videos">Videos</button>
           <button align="left" id="imageButton" onclick="browserGo('www.bing.com/images', '` + guid + `')" title="Images">Images</button>
-          <input type="text" id="url_` + guid + `" value="` + location.protocol + `//www.bing.com/" style="width:calc(100% - 314px);"/>
+          <input type="text" id="url_` + guid + `" value="` + location.protocol + `//www.bing.com/" style="width:calc(100% - 600px);"/>
           <button id="goButton" onclick="browserGo(undefined, '` + guid + `')" title="Go">Go</button><br>
           <div style="width:calc(100% - 5px);height:calc(100% - 27px);">
             <div style="display: none" id="loading_` + guid + `" title="Loading..." class="load-overlay">
