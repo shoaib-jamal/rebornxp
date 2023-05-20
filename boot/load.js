@@ -20,6 +20,7 @@ var scripts = [
   'system/audio.js',
   'system/lambda.js',
   'program/minesweeper.js',
+  'program/paint.js',
   '//xpstore.glitch.me/appstore.js',
   'boot/boot.js'
 ];
