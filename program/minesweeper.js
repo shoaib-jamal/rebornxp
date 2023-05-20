@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('minesweeper', () => {
-    var el = $.parseHTML(`<window width="350" height="500" title="Minesweeper">
+    var el = $.parseHTML(`<window width="300" height="500" title="Minesweeper">
       <style>
 iframe[seamless]{
   background-color: transparent;
@@ -20,7 +20,7 @@ iframe[seamless]{
   
   <div class="frame-container">
     
-<iframe height="100%" seamless="seamless" width="100%" src="https://roanrobersson.github.io/js-minesweeper/index.html"></iframe>
+<iframe height="100%" seamless="seamless" width="100%" src="https://mines.vercel.app/"></iframe>
   </div> 
     </window>`);
     document.body.appendChild(el[0]);
