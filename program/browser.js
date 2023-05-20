@@ -22,7 +22,7 @@ function iframeContentLoaded(guid) {
 $(window).on('xpboot', function() {
   xp.applications.add('browser', (args) => {
       var guid = generate_guid();
-      var el = $.parseHTML(`<window title="Internet ExploDer" width="640" height="480">
+      var el = $.parseHTML(`<window title="Internet Exploder" width="800" height="600">
         <style>
     .load-overlay {
       position: absolute;
@@ -43,10 +43,16 @@ $(window).on('xpboot', function() {
 
     @keyframes lds-dual-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes lds-dual-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.lds-dual-ring{position:relative}.lds-dual-ring div{position:absolute;width:40px;height:40px;top:80px;left:80px;border-radius:50%;border:4px solid #000;border-color:#51CACC transparent;-webkit-animation:lds-dual-ring 1s linear infinite;animation:lds-dual-ring 1s linear infinite}.lds-dual-ring{width:200px!important;height:200px!important;-webkit-transform:translate(-100px,-100px) scale(1) translate(100px,100px);transform:translate(-100px,-100px) scale(1) translate(100px,100px)}
         </style>
+        
+                
+
+
         <div id="webBrowserContent">
+          <button align="left" id="homeButton" onclick="browserGo('www.bing.com', '` + guid + `')" title="Home">Home</button>
+                            <button align="left" id="homeButton" onclick="browserGo('www.google.com/?igu=1', '` + guid + `')" title="Google">Google</button>
+                            <button align="left" id="homeButton" onclick="browserGo('www.wikipedia.com', '` + guid + `')" title="Wikipedia">Wikipedia</button>
           <button align="left" id="videoButton" onclick="browserGo('www.bing.com/videos', '` + guid + `')" title="Videos">Videos</button>
           <button align="left" id="imageButton" onclick="browserGo('www.bing.com/images', '` + guid + `')" title="Images">Images</button>
-          <button align="left" id="homeButton" onclick="browserGo('www.bing.com', '` + guid + `')" title="Home">Home</button>
           <input type="text" id="url_` + guid + `" value="` + location.protocol + `//www.bing.com/" style="width:calc(100% - 314px);"/>
           <button id="goButton" onclick="browserGo(undefined, '` + guid + `')" title="Go">Go</button><br>
           <div style="width:calc(100% - 5px);height:calc(100% - 27px);">
@@ -67,7 +73,7 @@ $(window).on('xpboot', function() {
   });
 
   xp.applications.add('html', (args) => {
-    var el = $.parseHTML(`<window title="` + args[1] + `" width="640" height="480">
+    var el = $.parseHTML(`<window title="` + args[1] + `" width="800" height="600">
     <style>
       iframe[seamless]{
         background-color: transparent;
@@ -92,5 +98,5 @@ $(window).on('xpboot', function() {
     $(el).updateWindow();
   });
   
-  xp.startmenu.add('browser', 'Web Browser', 'https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fbrowser.png?1520137537939');
+  xp.startmenu.add('browser', 'Internet Exploder', 'https://www.freeiconspng.com/uploads/internet-explorer-logo-icon-10.png');
 });
