@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('paint', () => {
-    var el = $.parseHTML(`<window width="900" height="600" title="JS Paint">
+    var el = $.parseHTML(`<window width="800" height="500" title="JS Paint">
       <style>
 iframe[seamless]{
   background-color: transparent;
