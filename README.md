@@ -59,7 +59,8 @@ Once you've launched RebornXP, you can navigate the desktop using the mouse and 
 
 I hope you enjoy using RebornXP as much as I enjoyed creating it!
 
-<h2 align="center"> Credits</h2>
+## Credits
+
 - Paint reimplementation by [1j01](https://github.com/1j01)
 - Minesweeper reimplementation by [Shizukulchi](https://github.com/ShizukuIchi/minesweeper)
 
