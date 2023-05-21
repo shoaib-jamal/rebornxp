@@ -432,14 +432,14 @@ function runAppDialog() {
     canMinimize: false
   });
   win.content(`<form action="#">
-    <span class="icon icon_run" draggable="false" style="position: absolute;left:11px;top:17px;"/>
-    <p style="position:absolute;left:54px;top:8px;">
+    <span class="icon icon_run" draggable="false" style="position: absolute; left: 11px; top: 17px;"></span>
+    <p style="position: absolute; left: 54px; top: 8px;">
       Type the name of a program, document, or<br>
       Internet resource, and RebornXP will open it for you.
     </p>
-    <p style="position:absolute;top:54px;left:12px;line-height:8px;">Open:</p>
-    &nbsp;&nbsp;<input type="text" class="prompttext" style="width:275px;position:absolute;top:60px;left:54px;"/>
-    <center style="position:absolute;bottom:17px;right:16.7px;">
+    <p style="position: absolute; top: 54px; left: 12px; line-height: 16px;">Open:</p>
+    <input type="text" class="prompttext" style="width: 275px; position: absolute; top: 70px; left: 54px;">
+    <center style="position: absolute; bottom: 17px; right: 16.7px;">
       <button class="ok">OK</button>
       <button class="cancel">Cancel</button>
       <button class="browse">Browse</button>
