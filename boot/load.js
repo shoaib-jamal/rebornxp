@@ -17,6 +17,7 @@ var scripts = [
   'system/config.js',
   'system/controlpanel.js',
   'system/uac.js',
+  'system/uac_app.js',
   'system/audio.js',
   'system/lambda.js',
   'program/minesweeper.js',
