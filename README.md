@@ -63,6 +63,7 @@ I hope you enjoy using RebornXP as much as I enjoyed creating it!
 
 - Paint reimplementation by [1j01](https://github.com/1j01)
 - Minesweeper reimplementation by [Shizukulchi](https://github.com/ShizukuIchi/minesweeper)
+- Wallpaper [Credits](https://github.com/shoaib-jamal/rebornxp/blob/35fe5ed04f58668b3f859b2463de4f36bd5ead8f/system/themes/wallpapers/credits.md)
 
 If you believe that I have utilized any portion of your asset, code or library, kindly reach out to me, and I will promptly acknowledge and credit your contributions.
 
