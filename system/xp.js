@@ -116,7 +116,7 @@ $(function() {
   xp.applications.add('winver', function() {
     var guid = generate_guid();
     var temp = document.createElement('div');
-    temp.innerHTML = `<window title="About RebornXP" width="418" height="300">
+    temp.innerHTML = `<window title="About RebornXP" width="418" height="320">
     <center>
     <img src="boot/assets/logo.png" width="100" height="100">
     <br>
@@ -129,6 +129,11 @@ $(function() {
       
       <p> © 2023 - Shoaib Khan<br>
       RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
+      <br>
+      <a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-yellow.svg"></a>
+      <a href="https://github.com/shoaib-jamal/rebornxp/stargazers"><img src="https://img.shields.io/github/stars/shoaib-jamal/rebornxp?label=GitHub%20Stars&style=social"></a>
+      <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=social"></a>
+<br>      
       </center>
     <center style="position:absolute;bottom:4.5px;right:4.5px;">
       <button id="OKButton_` + guid + `">OK</button>
@@ -327,7 +332,7 @@ $.fn.initWindows = function() {
             <li class="startmenuitem" onclick="openApp('winhelp')">
               <img src="` + xp.startmenu.icons.help + `"/>
               <div><div>
-                <b>About RebornXP</b>
+                <b>Help & Support</b>
               </div></div>
             </li>
 
