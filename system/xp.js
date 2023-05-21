@@ -116,13 +116,20 @@ $(function() {
   xp.applications.add('winver', function() {
     var guid = generate_guid();
     var temp = document.createElement('div');
-    temp.innerHTML = `<window title="About RebornXP" width="418" height="328">
+    temp.innerHTML = `<window title="About RebornXP" width="418" height="300">
+    <center>
+    <img src="boot/assets/logo.png" width="100" height="100">
     <br>
-    <center><h1>RebornXP</h1></center>
-    <br>
-    <p>&nbsp;&nbsp;RebornXP &copy; 2021 Shoaib Jamal</p>
-    <p>&nbsp;&nbsp;Version ` + xp.version + `</p>
-    <p>&nbsp;&nbsp;Powered by <a href="https://jquery.com/">JQuery</a></p>
+      <h2>Reborn XP</h2>
+      <p> Version ` + xp.version + `</p>
+      
+      <p> Registered to: ` + xp.profile.name + `</p>
+
+      <p>Powered by <a href="https://jquery.com/" target="_blank">JQuery</a></p>
+      
+      <p> © 2023 - Shoaib Khan<br>
+      RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
+      </center>
     <center style="position:absolute;bottom:4.5px;right:4.5px;">
       <button id="OKButton_` + guid + `">OK</button>
     </center>
@@ -236,12 +243,22 @@ $.fn.initWindows = function() {
         <div class="startmenu_middle">
           <ul class="menu startmenu_programs">
             <li class="startmenuitem large" onclick="openApp('browser')">
-              <img src="https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fbrowser.png?1520137537939"/>
+              <img src="https://www.freeiconspng.com/uploads/internet-explorer-logo-icon-10.png"/>
               <div><div>
                 <b>Internet</b><br/>
                 Web Browser
               </div></div>
             </li>
+
+            <li class="startmenuitem large" onclick="openApp('terminal')">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACOUlEQVRYhe2Xv2sTYRjHP8/lvSRN27QipUr9UQLFLhVLRVrN4CQ5cKjg6uIgpQgObi6d+0/o0NHBpZCAVQqigw4VC9GAixAbpNGmMUnT/LjXoV4IJk3AXFLBfuG45w6e5/u55+6euxf+U4kTGEdiPzOjWFoyDkiu3ptDzAfjI9MWWqRdbif6sv3uhbGXe+zPbL0NFgM/U6nVgvLJ5dfjE2MycWmym94EzX1Ob47M5zOF+cTGk4WMKqwCBTU+OSYJdYrEx0zHJgN+xcObE6zH08STWRZvhFiPpwl+WuOResYd7vLhcxa/Lfd1pRIHvqpE31kYGurYHACfB0wvDA7Aibp4eBhKXuYC22z09yO71WBVjGnglbp2DsJX+twBAIr8YDYEsyGzFhMKs0KYQeDk5hp5W5uGiBdAhdUWy9cvugbQThdurZAXEWxtwFG9hnU6BmgAiEQiaK1rWyQSaUjSWncPIBqNYlkWIoJlWUSj0aaJzcBcAQCIxWK1vdRNZ+fKW4G5AnCYHBgH0I0uNAVwCjvPQzO51QXVrrBlWbVYa93QBef8YZI2H9gGgD/ve6tiznE7k1b69+bAMcAxQK+l0rtlpqamemaYK9u/B4doAPXyfarI+UVTS6+6UcDQdr7iMfYBVCr+dEFKxduCDoJuGExdUEWQHY/HnwRQYujnVY+8Mcu2F1s8Xbc3dLXis4umLmYB1F5VfT9Tyu2UywUDRrvuD98wdcBOju5X4GCR2NXlWBu592v1t/oFx8vJxHIFQMwAAAAASUVORK5CYII="/>
+              <div><div>
+                <b>Shell</b><br/>
+                JQuery Terminal
+              </div></div>
+            </li>
+
+
           </ul>
           <ul class="menu startmenu_allprograms">
             <li class="startmenuitem">
@@ -263,7 +280,7 @@ $.fn.initWindows = function() {
                 <b>My Documents</b>
               </div></div>
             </li>
-            <li class="startmenuitem">
+            <li class="startmenuitem"  onclick="openLocation('/Documents and Settings/' + xp.profile.name + '/My Documents')">
               <img src="` + xp.startmenu.icons.recentdocuments + `"/>
               <div><div>
                 <b>My Recent Documents</b>
@@ -294,10 +311,10 @@ $.fn.initWindows = function() {
                 <b>Control Panel</b>
               </div></div>
             </li>
-            <li class="startmenuitem" onclick="">
+            <li class="startmenuitem" onclick="openApp('uac_app')">
               <img src="` + xp.startmenu.icons.controlpanel + `"/>
               <div><div>
-                <b>Set Program Access and Defaults</b>
+                <b>User Accounts and Control</b>
               </div></div>
             </li>
             <li class="startmenuitem" onclick="">
