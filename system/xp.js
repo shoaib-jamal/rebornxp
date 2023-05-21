@@ -317,10 +317,10 @@ $.fn.initWindows = function() {
                 <b>User Accounts and Control</b>
               </div></div>
             </li>
-            <li class="startmenuitem" onclick="">
+            <li class="startmenuitem" onclick="openApp('themes')">
               <img src="` + xp.startmenu.icons.controlpanel + `"/>
               <div><div>
-                <b>Printers and Faxes</b>
+                <b>Personalize RebornXP</b>
               </div></div>
             </li>
             <li class="startmenuseparator"></li>
