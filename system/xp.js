@@ -116,7 +116,7 @@ $(function() {
   xp.applications.add('winver', function() {
     var guid = generate_guid();
     var temp = document.createElement('div');
-    temp.innerHTML = `<window title="About RebornXP" width="418" height="320">
+    temp.innerHTML = `<window title="About RebornXP" width="418" height="400">
     <center>
     <img src="boot/assets/logo.png" width="100" height="100">
     <br>
@@ -129,6 +129,8 @@ $(function() {
       
       <p> © 2023 - Shoaib Khan<br>
       RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
+      <br>
+      <a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
       <br>
       <a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-yellow.svg"></a>
       <a href="https://github.com/shoaib-jamal/rebornxp/stargazers"><img src="https://img.shields.io/github/stars/shoaib-jamal/rebornxp?label=GitHub%20Stars&style=social"></a>
