@@ -14,8 +14,9 @@
 <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=for-the-badge"></a>
 
 </p>
-
-
+<p align="center">
+<a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
 <p align="center">RebornXP is a web-based desktop environment that brings back the late 2000's personal computing experience right to your desktop, but in a modern way. It emulates the look and feel of Windows XP, providing users with a nostalgic and fun experience while also offering modern features like an app store, user accounts, and browser storage.
   </p>
 
