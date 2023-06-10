@@ -130,8 +130,8 @@ $(function() {
       <p> © 2023 - Shoaib Khan<br>
       RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
       <br>
-      <a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-      <br>
+      <a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 200px !important;" ></a>
+      <br><br>
       <a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-yellow.svg"></a>
       <a href="https://github.com/shoaib-jamal/rebornxp/stargazers"><img src="https://img.shields.io/github/stars/shoaib-jamal/rebornxp?label=GitHub%20Stars&style=social"></a>
       <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=social"></a>
@@ -262,6 +262,14 @@ $.fn.initWindows = function() {
               <div><div>
                 <b>Shell</b><br/>
                 JQuery Terminal
+              </div></div>
+            </li>
+            
+            <li class="startmenuitem large" onclick="window.open('https://www.buymeacoffee.com/shoaibify', '_blank');">
+              <img src="https://media.giphy.com/media/TDQOtnWgsBx99cNoyH/giphy.gif"/>
+              <div><div>
+                <b>Support</b><br/>
+                Buy me a coffee
               </div></div>
             </li>
 
