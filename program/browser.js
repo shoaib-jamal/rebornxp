@@ -22,7 +22,7 @@ function iframeContentLoaded(guid) {
 $(window).on('xpboot', function() {
   xp.applications.add('browser', (args) => {
       var guid = generate_guid();
-      var el = $.parseHTML(`<window title="Internet Explorer" width="800" height="500">
+      var el = $.parseHTML(`<window title="Idiot Explorer 6" width="800" height="500">
         <style>
     .load-overlay {
       position: absolute;
@@ -98,5 +98,5 @@ $(window).on('xpboot', function() {
     $(el).updateWindow();
   });
   
-  xp.startmenu.add('browser', 'Internet Exploder', 'https://www.freeiconspng.com/uploads/internet-explorer-logo-icon-10.png');
+  xp.startmenu.add('browser', 'Idiot Explorer 6', 'program/assets/ie.webp');
 });
