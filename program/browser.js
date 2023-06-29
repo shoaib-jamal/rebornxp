@@ -22,7 +22,7 @@ function iframeContentLoaded(guid) {
 $(window).on('xpboot', function() {
   xp.applications.add('browser', (args) => {
       var guid = generate_guid();
-      var el = $.parseHTML(`<window title="Internet Exploder" width="800" height="500">
+      var el = $.parseHTML(`<window title="Internet Explorer" width="800" height="500">
         <style>
     .load-overlay {
       position: absolute;
@@ -48,12 +48,12 @@ $(window).on('xpboot', function() {
 
 
         <div id="webBrowserContent">
-          <button align="left" id="homeButton" onclick="browserGo('www.bing.com', '` + guid + `')" title="Home">Home</button>
+          <button align="left" id="homeButton" onclick="browserGo('google2002.anasdew.tech', '` + guid + `')" title="Home">Home</button>
                             <button align="left" onclick="browserGo('www.google.com/?igu=1', '` + guid + `')" title="Google">Google</button>
                             <button align="left" onclick="browserGo('www.wikipedia.com', '` + guid + `')" title="Wikipedia">Wikipedia</button>
           <button align="left" id="videoButton" onclick="browserGo('www.bing.com/videos', '` + guid + `')" title="Videos">Videos</button>
           <button align="left" id="imageButton" onclick="browserGo('www.bing.com/images', '` + guid + `')" title="Images">Images</button>
-          <input type="text" id="url_` + guid + `" value="` + location.protocol + `//www.bing.com/" style="width:calc(100% - 600px);"/>
+          <input type="text" id="url_` + guid + `" value="` + location.protocol + `//google2002.anasdew.tech" style="width:calc(100% - 600px);"/>
           <button id="goButton" onclick="browserGo(undefined, '` + guid + `')" title="Go">Go</button><br>
           <div style="width:calc(100% - 5px);height:calc(100% - 27px);">
             <div style="display: none" id="loading_` + guid + `" title="Loading..." class="load-overlay">
@@ -61,7 +61,7 @@ $(window).on('xpboot', function() {
                 <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-dual-ring"><div></div></div></div>
               </div>
             </div>
-            <iframe style="width:calc(100% - 5px);height:calc(100% - 29px);position:absolute;top:24;left:0;" onload="iframeContentLoaded('` + guid + `')" onunload="iframeContentUnload('` + guid + `')" src="` + location.protocol + `//www.bing.com/" id="webPage_` + guid + `"></iframe>
+            <iframe style="width:calc(100% - 5px);height:calc(100% - 29px);position:absolute;top:24;left:0;" onload="iframeContentLoaded('` + guid + `')" onunload="iframeContentUnload('` + guid + `')" src="` + location.protocol + `//google2002.anasdew.tech" id="webPage_` + guid + `"></iframe>
           </div>
         </div>
       </window>`);
