@@ -27,3 +27,8 @@ body {
   position: absolute;
   bottom: 0;
 }
+._ui_boot_banner {
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+}
