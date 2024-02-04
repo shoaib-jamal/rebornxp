@@ -44,7 +44,18 @@ $(function() {
   $('windows').html(`
 <div class="_ui_boot">
   <div class="_ui_boot_copyright"></div>
-  <div class="_ui_boot_companylogo"></div>
+  <div class="_ui_boot_banner">
+  <script type="text/javascript">
+	atOptions = {
+		'key' : 'c6fcae1df244f046ec5e7a0bd9e033ea',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/c6fcae1df244f046ec5e7a0bd9e033ea/invoke.js"></scr' + 'ipt>');
+</script>
+</div>
   <center class="_ui_boot_logo">
     <div class="_ui_boot_winlogo"></div>
     <div class="_ui_boot_progress"></div>
