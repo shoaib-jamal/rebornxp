@@ -43,8 +43,8 @@ var requiredDirectories = [];
 $(function() {
   $('windows').html(`
 <div class="_ui_boot">
-  <div class="_ui_boot_copyright"></div>
-   <div class="_ui_boot_banner"></div>
+  <div class="_ui_boot_copyright">©️ Copyrights on a coffee break ☕️</div>
+   <div class="_ui_boot_companylogo"></div>
  
   <center class="_ui_boot_logo">
     <div class="_ui_boot_winlogo"></div>
@@ -108,7 +108,7 @@ $(function() {
               var event = new Event('xpboot');
               window.dispatchEvent(event);
               console.log('Dispatched boot event');
-              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="boot/assets/welcome.png"/></div>');
+              $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="boot/assets/logon.jpg"/></div>');
               $.getScript('system/login.js');
               xp.audio.playURL('boot/assets/startup.wav');
             }
@@ -123,7 +123,7 @@ $(function() {
                 dirReader.readEntries (function(results) {
                   if (results.length === 0) {
                     $('._ui_boot').remove();
-                    $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="boot/assets/welcome.png"/></div>');
+                    $('windows').html('<div class="_ui_wallpaper fullscreen"><img class="_ui_wallpaper_image" src="boot/assets/logon.jpg"/></div>');
                     $.getScript('setup/setup.js');
                   } else {
                     xp.filesystem.createDir('/WINDOWS', (e) => {

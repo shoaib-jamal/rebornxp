@@ -348,7 +348,7 @@ $(window).on('xpboot', () => {
               xp.profile.name = win.el.find('.username').val();
               var oldConfigFile = configFile;
               configFile = `/Documents and Settings/${xp.profile.name}/config.json`;
-              xp.wallpaper.href = 'https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FBliss.jpg?1519950052202';
+              xp.wallpaper.href = 'https://rebornxp.js.org/system/themes/XP.jpg';
               win.content(`
 <div style="margin-left:32px;">
     <h1 style="font-weight:normal;">Please wait while we create the user account.</h1>
