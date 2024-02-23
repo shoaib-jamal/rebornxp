@@ -14,9 +14,7 @@
 <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=for-the-badge"></a>
 
 </p>
-<p align="center">
-<a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-</p>
+
 <p align="center">RebornXP is a web-based desktop environment that brings back the late 2000's personal computing experience right to your desktop, but in a modern way. It emulates the look and feel of Windows XP, providing users with a nostalgic and fun experience while also offering modern features like an app store, user accounts, and browser storage.
   </p>
 
@@ -70,6 +68,7 @@ I hope you enjoy using RebornXP as much as I enjoyed creating it!
 
 - Paint reimplementation by [1j01](https://github.com/1j01)
 - Minesweeper reimplementation by [Shizukulchi](https://github.com/ShizukuIchi/minesweeper)
+- Webamp, Winamp 2 reimplementation by: [captbaritone](https://github.com/captbaritone/webamp)
 - Wallpaper [Credits](https://github.com/shoaib-jamal/rebornxp/blob/35fe5ed04f58668b3f859b2463de4f36bd5ead8f/system/themes/wallpapers/credits.md)
 
 If you believe that I have utilized any portion of your asset, code or library, kindly reach out to me, and I will promptly acknowledge and credit your contributions.
