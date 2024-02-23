@@ -239,7 +239,19 @@ $.fn.initWindows = function() {
         <div class="icon icon_computer"></div>
         <span>My Computer</span>
       </div>
+      
+      <div tabindex="0" data-exe="openApp('browser')" class="ui_icon" style="position:absolute;left:0px;top:64px;">
+       <div class="icon" style="background-image: url('program/assets/ie.png')"></div>
+        <span>Idiot Explorer</span>
+      </div>
+      
+      <div tabindex="0" data-exe="openApp('quenq')" class="ui_icon" style="position:absolute;left:0px;top:128px;">
+       <div class="icon" style="background-image: url('program/assets/quenq.png')"></div>
+        <span>Internet Messenger</span>
+      </div>
+      
     </div>
+    
     <taskbar id="_ui_taskbar" class="shadow" onmousedown="return false;" oncontextmenu="return false;">
       <button class="start" onmousedown="toggleStartMenu()" isopen="false">Start</button>
       <div class="startmenu shadow" style="display: none">
@@ -250,12 +262,21 @@ $.fn.initWindows = function() {
         <div class="startmenu_middle">
           <ul class="menu startmenu_programs">
             <li class="startmenuitem large" onclick="openApp('browser')">
-              <img src="https://www.freeiconspng.com/uploads/internet-explorer-logo-icon-10.png"/>
+              <img src="program/assets/ie.png"/>
               <div><div>
                 <b>Internet</b><br/>
                 Web Browser
               </div></div>
             </li>
+            
+            <li class="startmenuitem large" onclick="openApp('quenq')">
+              <img src="program/assets/quenq.png"/>
+              <div><div>
+                <b>Quenq</b><br/>
+                Messenger
+              </div></div>
+            </li>
+
 
             <li class="startmenuitem large" onclick="openApp('terminal')">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACOUlEQVRYhe2Xv2sTYRjHP8/lvSRN27QipUr9UQLFLhVLRVrN4CQ5cKjg6uIgpQgObi6d+0/o0NHBpZCAVQqigw4VC9GAixAbpNGmMUnT/LjXoV4IJk3AXFLBfuG45w6e5/u55+6euxf+U4kTGEdiPzOjWFoyDkiu3ptDzAfjI9MWWqRdbif6sv3uhbGXe+zPbL0NFgM/U6nVgvLJ5dfjE2MycWmym94EzX1Ob47M5zOF+cTGk4WMKqwCBTU+OSYJdYrEx0zHJgN+xcObE6zH08STWRZvhFiPpwl+WuOResYd7vLhcxa/Lfd1pRIHvqpE31kYGurYHACfB0wvDA7Aibp4eBhKXuYC22z09yO71WBVjGnglbp2DsJX+twBAIr8YDYEsyGzFhMKs0KYQeDk5hp5W5uGiBdAhdUWy9cvugbQThdurZAXEWxtwFG9hnU6BmgAiEQiaK1rWyQSaUjSWncPIBqNYlkWIoJlWUSj0aaJzcBcAQCIxWK1vdRNZ+fKW4G5AnCYHBgH0I0uNAVwCjvPQzO51QXVrrBlWbVYa93QBef8YZI2H9gGgD/ve6tiznE7k1b69+bAMcAxQK+l0rtlpqamemaYK9u/B4doAPXyfarI+UVTS6+6UcDQdr7iMfYBVCr+dEFKxduCDoJuGExdUEWQHY/HnwRQYujnVY+8Mcu2F1s8Xbc3dLXis4umLmYB1F5VfT9Tyu2UywUDRrvuD98wdcBOju5X4GCR2NXlWBu592v1t/oFx8vJxHIFQMwAAAAASUVORK5CYII="/>
@@ -272,6 +293,7 @@ $.fn.initWindows = function() {
                 Buy me a coffee
               </div></div>
             </li>
+            
 
 
           </ul>
