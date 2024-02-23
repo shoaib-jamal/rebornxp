@@ -116,30 +116,24 @@ $(function() {
   xp.applications.add('winver', function() {
     var guid = generate_guid();
     var temp = document.createElement('div');
-    temp.innerHTML = `<window title="About RebornXP" width="418" height="400">
+    temp.innerHTML = `<window title="About RebornXP" width="418" height="320">
     <center>
     <img src="boot/assets/logo.png" width="100" height="100">
     <br>
       <h2>Reborn XP</h2>
-      <p> Version ` + xp.version + `</p>
-      
-      <p> Registered to: ` + xp.profile.name + `</p>
+      <p> Version ` + xp.version + ` | Registered to: ` + xp.profile.name + `</p>
 
-      <p>Powered by <a href="https://jquery.com/" target="_blank">JQuery</a></p>
       
-      <p> © 2023 - Shoaib Khan<br>
-      RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
+      <p>The Windows XP name, artwork, and trademark are the property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.</p>
+      <p>RebornXP is <a href="https://github.com/shoaib-jamal/rebornxp" target="_blank">Open Source</a> under the GPL v3.0 License</p>
+      
       <br>
-      <a href="https://www.buymeacoffee.com/shoaibify" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 200px !important;" ></a>
-      <br><br>
       <a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-yellow.svg"></a>
       <a href="https://github.com/shoaib-jamal/rebornxp/stargazers"><img src="https://img.shields.io/github/stars/shoaib-jamal/rebornxp?label=GitHub%20Stars&style=social"></a>
-      <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=social"></a>
+      <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=social"></a> &nbsp <button id="OKButton_` + guid + `">OK</button>
 <br>      
       </center>
-    <center style="position:absolute;bottom:4.5px;right:4.5px;">
-      <button id="OKButton_` + guid + `">OK</button>
-    </center>
+    
   </window>`;
     var el = temp.firstChild;
     document.body.appendChild(el);
@@ -240,15 +234,26 @@ $.fn.initWindows = function() {
         <span>My Computer</span>
       </div>
       
-      <div tabindex="0" data-exe="openApp('browser')" class="ui_icon" style="position:absolute;left:0px;top:64px;">
+      <div tabindex="0" data-exe="openApp('browser')" class="ui_icon" style="position:absolute;left:0px;top:70px;">
        <div class="icon" style="background-image: url('program/assets/ie.png')"></div>
         <span>Idiot Explorer</span>
       </div>
       
-      <div tabindex="0" data-exe="openApp('quenq')" class="ui_icon" style="position:absolute;left:0px;top:128px;">
+      <div tabindex="0" data-exe="openApp('quenq')" class="ui_icon" style="position:absolute;left:0px;top:140px;">
        <div class="icon" style="background-image: url('program/assets/quenq.png')"></div>
         <span>Internet Messenger</span>
       </div>
+      
+       <div tabindex="0" data-exe="openApp('webamp')" class="ui_icon" style="position:absolute;left:0px;top:220px;">
+       <div class="icon" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuNWRHWFIAAAGuSURBVFhHrZRRloMgDAB7yb3k/u2PB/MCLAMEAySIUt+bGkLIxNrXTwjhNfGKN3vPgzP6XLP5BJocx9E0m0Fdqv35wgClQTjPc2mIvP+X5OF3c4ByOMkFbwhyOX/JtwYoBxu5NQT3FCOcyFOtXswoB025UIfQ4okcmoXHipyaQV7EnhyGRM+qvMoeyMFMCndy9nfkYCZhRa5FnvzVADN5bapEnpz6u/+JMZGL18Q3yJl6tnNBu8hF2+KG+M1w3v2zqkHeHORDQ77unr4GeCXltdCHftYQ+cOQmwNIU2EmV2sZAPohuFg0YiHtqUYNllwG6/L00X31EHy6Q7gDePI+F+nlggwRq+a/gZ5BPnlq0P2E4RsQStI8lPcMuV4XPDEMvwEJasIYYpC/eGro5VCDJpmL0qEcF7kjhpkYLDk0Cw3Fg7yTgtRZUsGTw5AQqnzjqWEmBzup5Y74G3IYExP5qhhW5NAubuRclqxnVQ5XQGi8b/LSrNxNqfBEDldAqMQil/2mLl7fkMMVqAGIZ43K3rYcroDQeWqLUrclhyuI4dMmpf61HMzkE3bkIYTPP7z0VJ1idtq7AAAAAElFTkSuQmCC')"></div>
+        <span>Winamp</span>
+      </div>
+      
+      
+      
+      
+      
+      
       
     </div>
     
