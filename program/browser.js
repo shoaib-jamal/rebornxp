@@ -98,5 +98,5 @@ $(window).on('xpboot', function() {
     $(el).updateWindow();
   });
   
-  xp.startmenu.add('browser', 'Idiot Explorer 6', 'program/assets/ie.webp');
+  xp.startmenu.add('browser', 'Idiot Explorer 6', 'program/assets/ie.png');
 });
