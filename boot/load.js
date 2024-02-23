@@ -23,6 +23,7 @@ var scripts = [
   'program/minesweeper.js',
   'program/paint.js',
   'program/quenq.js',
+  'program/webamp.js',
   '//xpstore.glitch.me/appstore.js',
   'boot/boot.js'
 ];
