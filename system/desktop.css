@@ -77,3 +77,9 @@
     color: #fff;
     text-shadow: 0 0 transparent;
 }
+
+.selection-box {
+  position: absolute;
+  border: 2px solid #3498db;
+  background: rgba(52, 152, 219, 0.3);
+}
