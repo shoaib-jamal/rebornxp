@@ -4,12 +4,11 @@
 <img src="https://i.ibb.co/drj1RSf/rebornxp.png" width="200"><p align="center"></p>
 <h1 align="center">RebornXP</h1>
 <p align="center">
-  <a href="https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment">
-    <img src="https://github.com/RebornXP/rebornxp/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment">
-  </a>
-  <br>
-     <a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-green.svg?style=for-the-badge"></a>
-  <img alt="GitHub Release Date - Published_At" src="https://img.shields.io/github/release-date/shoaib-jamal/rebornxp?style=for-the-badge">
+  
+  [![](https://dcbadge.vercel.app/api/server/TUVZWcCQHm)](https://discord.gg/TUVZWcCQHm)
+  
+<a href="https://opensource.org/license/gpl-3-0/"><img src="https://img.shields.io/badge/License-GPL-green.svg?style=for-the-badge"></a>
+<img alt="GitHub Release Date - Published_At" src="https://img.shields.io/github/release-date/shoaib-jamal/rebornxp?style=for-the-badge">
 <a href="https://github.com/shoaib-jamal/rebornxp/stargazers"><img src="https://img.shields.io/github/stars/shoaib-jamal/rebornxp?label=GitHub%20Stars&style=for-the-badge"></a>
 <a href="https://github.com/shoaib-jamal/rebornxp/network/members"><img src="https://img.shields.io/github/forks/shoaib-jamal/rebornxp?style=for-the-badge"></a>
 
