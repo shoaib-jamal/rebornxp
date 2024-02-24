@@ -263,6 +263,11 @@ $.fn.initWindows = function() {
        <div class="icon" style="background-image: url('program/assets/chrone.png')"></div>
         <span>Koogle Chrome</span>
       </div>
+
+      <div tabindex="7" onclick="window.open('https://discord.gg/TUVZWcCQHm', '_blank'); return false;" class="ui_icon" style="position:absolute;left:0px;top:520px;">
+       <div class="icon" style="background-image: url('program/assets/discord-link.png')"></div>
+        <span>Join Discord</span>
+      </div>
       
       
       
