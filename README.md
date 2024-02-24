@@ -29,6 +29,8 @@
   - Integration with jQuery Terminal for enhanced command-line interaction
   - Multiple User Accounts (UAC)
   - Functional Run Dialog
+  - Drag and drop icons on the desktop with selection box
+  - Icon position persistence using local storage
 
 - **Personalization Options:**
   - Theme options including:
