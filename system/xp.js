@@ -234,26 +234,20 @@ $.fn.initWindows = function() {
         <span>My Computer</span>
       </div>
       
-      <div tabindex="0" data-exe="openApp('browser')" class="ui_icon" style="position:absolute;left:0px;top:70px;">
+      <div tabindex="1" data-exe="openApp('browser')" class="ui_icon" style="position:absolute;left:0px;top:70px;">
        <div class="icon" style="background-image: url('program/assets/ie.png')"></div>
         <span>Idiot Explorer</span>
       </div>
       
-      <div tabindex="0" data-exe="openApp('quenq')" class="ui_icon" style="position:absolute;left:0px;top:140px;">
+      <div tabindex="2" data-exe="openApp('quenq')" class="ui_icon" style="position:absolute;left:0px;top:140px;">
        <div class="icon" style="background-image: url('program/assets/quenq.png')"></div>
         <span>Internet Messenger</span>
       </div>
       
-       <div tabindex="0" data-exe="openApp('webamp')" class="ui_icon" style="position:absolute;left:0px;top:220px;">
+       <div tabindex="3" data-exe="openApp('webamp')" class="ui_icon" style="position:absolute;left:0px;top:220px;">
        <div class="icon" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuNWRHWFIAAAGuSURBVFhHrZRRloMgDAB7yb3k/u2PB/MCLAMEAySIUt+bGkLIxNrXTwjhNfGKN3vPgzP6XLP5BJocx9E0m0Fdqv35wgClQTjPc2mIvP+X5OF3c4ByOMkFbwhyOX/JtwYoBxu5NQT3FCOcyFOtXswoB025UIfQ4okcmoXHipyaQV7EnhyGRM+qvMoeyMFMCndy9nfkYCZhRa5FnvzVADN5bapEnpz6u/+JMZGL18Q3yJl6tnNBu8hF2+KG+M1w3v2zqkHeHORDQ77unr4GeCXltdCHftYQ+cOQmwNIU2EmV2sZAPohuFg0YiHtqUYNllwG6/L00X31EHy6Q7gDePI+F+nlggwRq+a/gZ5BPnlq0P2E4RsQStI8lPcMuV4XPDEMvwEJasIYYpC/eGro5VCDJpmL0qEcF7kjhpkYLDk0Cw3Fg7yTgtRZUsGTw5AQqnzjqWEmBzup5Y74G3IYExP5qhhW5NAubuRclqxnVQ5XQGi8b/LSrNxNqfBEDldAqMQil/2mLl7fkMMVqAGIZ43K3rYcroDQeWqLUrclhyuI4dMmpf61HMzkE3bkIYTPP7z0VJ1idtq7AAAAAElFTkSuQmCC')"></div>
         <span>Winamp</span>
       </div>
-      
-      
-      
-      
-      
-      
       
     </div>
     
@@ -413,18 +407,147 @@ $.fn.initWindows = function() {
     $('#_ui_programsmenu').css('display', 'none');
   });*/
   
-  $('#_ui_desktop').on('click', function(e) {
-    var el = $(e.target).closest('.ui_icon');
-    if (el.hasClass('ui_selected')) {
-      el.removeClass('ui_selected');
-      eval(el.data('exe'));
+let isDragging = false;
+let startX, startY;
+let selectedIcon = null;
+let selectionBox;
+
+// Load icon positions from local storage on page load
+$(document).ready(function () {
+  loadIconPositions();
+});
+
+function loadIconPositions() {
+  const iconPositions = JSON.parse(localStorage.getItem("iconPositions")) || {};
+
+  // Apply stored positions to icons
+  for (const tabIndex in iconPositions) {
+    const position = iconPositions[tabIndex];
+    $('[tabindex="' + tabIndex + '"]').css({
+      left: position.left + "px",
+      top: position.top + "px",
+    });
+  }
+}
+
+function saveIconPosition(icon) {
+  const tabIndex = icon.attr("tabindex");
+  const iconPositions =
+    JSON.parse(localStorage.getItem("iconPositions")) || {};
+
+  // Save icon position to local storage
+  iconPositions[tabIndex] = {
+    left: parseInt(icon.css("left")),
+    top: parseInt(icon.css("top")),
+  };
+
+  localStorage.setItem("iconPositions", JSON.stringify(iconPositions));
+}
+
+$('#_ui_desktop').on('mousedown', function (e) {
+  const clickedIcon = $(e.target).closest('.ui_icon');
+
+  if (clickedIcon.length) {
+    // Icon is clicked
+    if (e.detail === 2) {
+      // Double-click event
+      eval(clickedIcon.data('exe'));
+      clickedIcon.removeClass('ui_selected');
+      selectedIcon = null;
     } else {
-      $('#_ui_desktop .ui_icon').each(function() {
-        $(this).removeClass('ui_selected');
-      });
-      el.addClass('ui_selected');
+      // Single-click event
+      isDragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+
+      if (!e.ctrlKey && !e.metaKey) {
+        // Deselect other icons if not holding Ctrl (or Command on Mac)
+        $('.ui_icon').removeClass('ui_selected');
+        selectedIcon = null;
+      }
+
+      if (!clickedIcon.hasClass('ui_selected')) {
+        clickedIcon.addClass('ui_selected');
+        selectedIcon = clickedIcon;
+      }
     }
-  });
+  } else {
+    // Clicked on desktop
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+
+    // Create selection box
+    selectionBox = $('<div class="selection-box"></div>');
+    $('#_ui_desktop').append(selectionBox);
+  }
+});
+
+$('#_ui_desktop').on('mousemove', function (e) {
+  if (!isDragging) return;
+
+  const currentX = e.clientX;
+  const currentY = e.clientY;
+
+  if (selectionBox) {
+    // Update selection box dimensions
+    const boxLeft = Math.min(startX, currentX);
+    const boxTop = Math.min(startY, currentY);
+    const boxWidth = Math.abs(currentX - startX);
+    const boxHeight = Math.abs(currentY - startY);
+
+    selectionBox.css({
+      'width': `${boxWidth}px`,
+      'height': `${boxHeight}px`,
+      'left': `${boxLeft}px`,
+      'top': `${boxTop}px`
+    });
+
+    // Select icons within the selection box
+    $('.ui_icon').each(function () {
+      const icon = $(this);
+      const iconRect = icon[0].getBoundingClientRect();
+      const isSelected = (
+        iconRect.left < boxLeft + boxWidth &&
+        iconRect.right > boxLeft &&
+        iconRect.top < boxTop + boxHeight &&
+        iconRect.bottom > boxTop
+      );
+
+      if (isSelected) {
+        icon.addClass('ui_selected');
+      } else {
+        icon.removeClass('ui_selected');
+      }
+    });
+  } else if (selectedIcon) {
+    // Dragging selected icons
+    const offsetX = currentX - startX;
+    const offsetY = currentY - startY;
+
+    $('.ui_selected').css({
+      'left': `+=${offsetX}px`,
+      'top': `+=${offsetY}px`
+    });
+
+    saveIconPosition(selectedIcon);
+
+    startX = currentX;
+    startY = currentY;
+  }
+});
+
+$(document).on('mouseup', function () {
+  isDragging = false;
+
+  if (selectionBox) {
+    // Remove selection box
+    selectionBox.remove();
+    selectionBox = null;
+  }
+});
+
+
   
   $("#_ui_taskbar").css("display", "inline");
   $("#_ui_boot").remove();
