@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('minesweeper', () => {
-    var el = $.parseHTML(`<window width="300" height="410" title="Minesweeper">
+    var el = $.parseHTML(`<window width="280" height="340" title="Minesweeper">
       <style>
 iframe[seamless]{
   background-color: transparent;
@@ -20,11 +20,11 @@ iframe[seamless]{
   
   <div class="frame-container">
     
-<iframe height="100%" seamless="seamless" width="100%" src="https://mines.vercel.app/"></iframe>
+<iframe height="100%" seamless="seamless" width="100%" src="https://98.js.org/programs/minesweeper/"></iframe>
   </div> 
     </window>`);
     document.body.appendChild(el[0]);
     $(el).updateWindow();
   });
-    xp.startmenu.add('minesweeper', 'Minesweeper', 'https://w7.pngwing.com/pngs/337/559/png-transparent-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game-angle.png');
+    xp.startmenu.add('minesweeper', 'Minesweeper', 'data:image/png;base64,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');
 });

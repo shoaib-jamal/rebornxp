@@ -1,6 +1,6 @@
 $(window).on('xpboot', () => {
   xp.applications.add('chrone', () => {
-    var el = $.parseHTML(`<window width="900" height="600" title="Koogle Chrome">
+    var el = $.parseHTML(`<window width="900" height="600" title="Chrome">
       <style>
 iframe[seamless]{
   background-color: transparent;
@@ -26,5 +26,5 @@ iframe[seamless]{
     document.body.appendChild(el[0]);
     $(el).updateWindow();
   });
-    xp.startmenu.add('chrone', 'Koogle Chrome', 'program/assets/chrone.png');
+    xp.startmenu.add('chrone', 'Chrome', 'program/assets/chrone.png');
 });

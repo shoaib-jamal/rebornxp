@@ -47,7 +47,7 @@
   - Paint
   - Messenger
   - Winamp
-
+  - Solitaire
 
 ## Contributing
 
@@ -57,10 +57,9 @@ You are free to open issues and send pull requests - I'll happily merge them. If
 
 The Windows XP name, artwork, and trademark are the property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.
 
-## Credits
+## Thanks
 
 - Paint reimplementation by [1j01](https://github.com/1j01)
-- Minesweeper reimplementation by [Shizukulchi](https://github.com/ShizukuIchi/minesweeper)
 - Webamp, Winamp 2 reimplementation by: [captbaritone](https://github.com/captbaritone/webamp)
 - Wallpaper [Credits](https://github.com/shoaib-jamal/rebornxp/blob/35fe5ed04f58668b3f859b2463de4f36bd5ead8f/system/themes/wallpapers/credits.md)
 

@@ -25,6 +25,7 @@ var scripts = [
   'program/quenq.js',
   'program/webamp.js',
   'program/chrone.js',
+  'program/solitaire.js',
   '//xpstore.glitch.me/appstore.js',
   'boot/boot.js'
 ];
