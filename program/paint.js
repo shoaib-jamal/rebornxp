@@ -20,7 +20,7 @@ iframe[seamless]{
   
   <div class="frame-container">
     
-<iframe height="100%" seamless="seamless" width="100%" src="https://jspaint.app/"></iframe>
+<iframe height="100%" seamless="seamless" width="100%" src="https://chowderman.github.io/xp-paint.html"></iframe>
   </div> 
     </window>`);
     document.body.appendChild(el[0]);
