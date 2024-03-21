@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Since RebornXP is a webOS, only the latest version (v2.0) release 1.01 is officially supported.
+Only the latest version based on SvelteKit found in the main branch is officially supported.
 
 ## Reporting a Vulnerability
 
