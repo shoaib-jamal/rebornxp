@@ -1,12 +1,3 @@
-[build]
-  base = "/"
-  command = "npm run build"
-  publish = "build"
-  
-# Production settings
-[build.environment]
-  NODE_ENV = "production"
-
 [[headers]]
   for = "/*"
     [headers.values]
