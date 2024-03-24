@@ -1,13 +1,18 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import preprocess from "svelte-preprocess";
+import adapter from '@sveltejs/adapter-node';
 
-export default {
-	kit: {
-		adapter: adapter({
-			// See below for an explanation of these options
-			routes: {
-				include: ['/*'],
-				exclude: ['<all>']
-			}
-		})
-	}
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter({ out: 'build' })
+    
+  },
+
+  preprocess: [
+    preprocess({
+      postcss: true,
+    }),
+  ],
 };
+
+export default config;
