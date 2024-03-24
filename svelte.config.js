@@ -1,20 +1,13 @@
-import preprocess from "svelte-preprocess";
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-cloudflare';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  kit: {
-    adapter: adapter(), // Use the adapter-netlify adapter
-    
-    // Optionally, specify other adapter options, such as `out` for the build output directory
-     adapter: adapter({ out: 'build' })
-  },
-
-  preprocess: [
-    preprocess({
-      postcss: true,
-    }),
-  ],
+export default {
+	kit: {
+		adapter: adapter({
+			// See below for an explanation of these options
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
+		})
+	}
 };
-
-export default config;
