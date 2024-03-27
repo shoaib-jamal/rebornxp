@@ -166,6 +166,19 @@
                 return [...values, program];
             })
         
+        } else if(path == './programs/messenger.svelte'){
+            const Program = (await import('./programs/messenger.svelte')).default;
+            let program = new Program({
+                target: node_ref,
+                props: {id: short.generate(), parentNode: node_ref, exec_path: path}
+            });
+            program.self = program;
+            //add to program tray
+            runningPrograms.update(values => {
+                return [...values, program];
+            })
+        
+        
         }  else if(path == './programs/properties.svelte'){
             const Program = (await import('./programs/properties.svelte')).default;
             let program = new Program({

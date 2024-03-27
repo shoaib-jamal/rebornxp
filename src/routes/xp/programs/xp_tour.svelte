@@ -56,7 +56,7 @@
     
     <div slot="content" bind:this={intro_player} class="absolute inset-1 flex flex-col bg-xp-yellow" style:background="{options.background}">
         <video autoplay playsinline class="absolute inset-0 {fullScreen ? 'object-cover' : 'object-cover'} w-full h-full">
-            <source src="/video/xp_tour.mp4" type="video/mp4">
+            <source src="https://www.bubbl.news/xptour.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 border-l-4 border-r-4 border-white">
 

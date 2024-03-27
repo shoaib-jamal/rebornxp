@@ -27,15 +27,9 @@
         },
         
         {
-            name: 'MSN Messenger',
+            name: 'Internet Messenger',
             icon: '/images/xp/icons/MSNMessenger.png',
-            path: './programs/webapp.svelte',
-            "webapp": {
-                "background": "#000000",
-                "url": "https://www.quenq.com/lobby/",
-                "name": "Quenq Messenger",
-                "icon": "/images/xp/icons/MSNMessenger.png"
-            },
+            path: './programs/messenger.svelte',
         },
         
         {
@@ -372,6 +366,13 @@
             name: 'Mozilla Firefox',
             icon: '/images/xp/icons/Firefox.png',
             path: './programs/firefox.svelte',
+			font: 'bold'
+            
+        },
+        {
+            name: 'Internet Messenger',
+            icon: '/images/xp/icons/MSNMessenger.png',
+            path: './programs/messenger.svelte',
 			font: 'bold'
             
         },
