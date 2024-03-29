@@ -97,8 +97,8 @@
     }
 </script>
 
-<div class="w-screen h-screen bg-black overflow-hidden font-MSSS">
-    <div class="mt-12 ml-8 text-lg">
+<div class="w-screen h-screen bg-black overflow-hidden font-MSSS flex flex-col">
+    <div class="mt-12 ml-8 text-lg flex-grow">
         <p class="text-slate-100">Use the ↑(Up) and ↓(Down) key to move the pointer to desired boot device.</p>
         <p class="text-slate-100">Press (Enter) to attempt to boot or ESC to cancel.</p>
         {#if !is_chromium}
@@ -120,8 +120,10 @@
 
         <p class="text-slate-100 uppercase mt-4 mb-2" style="display: {timerSeconds === 0 ? 'none' : 'block'}">The default entry will boot in {timerSeconds} seconds...</p>
     </div>
+    
     <script async="async" data-cfasync="false" src="//optionsdisk.com/cd00d0678a150f0d40592f970ccfab5c/invoke.js"></script>
-<div id="container-cd00d0678a150f0d40592f970ccfab5c"></div>
+<div style="margin-top: auto;" id="container-cd00d0678a150f0d40592f970ccfab5c"></div>
+    
 </div>
 
 <svelte:window on:keydown={on_key_pressed} on:keydown|preventDefault={removeTimer} on:keypress={beep} on:click={beep} />
