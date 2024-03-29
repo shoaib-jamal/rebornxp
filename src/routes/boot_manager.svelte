@@ -23,7 +23,7 @@
     ];
 
     let timer = null;
-    let timerSeconds = 5;
+    let timerSeconds = 10;
     let selected = false;
 
     function startTimer() {
@@ -39,7 +39,7 @@
 
     function resetTimer() {
         clearInterval(timer);
-        timerSeconds = 5;
+        timerSeconds = 10;
     }
 
     function on_key_pressed(e) {
