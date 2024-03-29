@@ -121,8 +121,7 @@
         <p class="text-slate-100 uppercase mt-4 mb-2" style="display: {timerSeconds === 0 ? 'none' : 'block'}">The default entry will boot in {timerSeconds} seconds...</p>
     </div>
     
-    <script async="async" data-cfasync="false" src="//optionsdisk.com/cd00d0678a150f0d40592f970ccfab5c/invoke.js"></script>
-<div style="margin-top: auto;" id="container-cd00d0678a150f0d40592f970ccfab5c"></div>
+
     
 </div>
 
