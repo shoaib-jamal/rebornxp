@@ -1,1 +1,0 @@
-# Adjaranet plugin for Kodi
