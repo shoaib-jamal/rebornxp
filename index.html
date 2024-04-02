@@ -1,94 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RebornXP Updates</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://raw.githubusercontent.com/shoaib-jamal/rebornxp/main/static/files/wallpapers/Bliss.jpg');
-    background-size: cover;
-    color: white;
-  }
-  .container {
-    position: relative;
-    min-height: 100vh; /* Changed height to min-height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px; /* Added top margin for countdown */
-  }
-  .countdown {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  .iframe-container {
-    margin-top: 20px;
-    border: 2px solid #007bff; /* WinXP-like blue border */
-    border-radius: 5px;
-    overflow: hidden; /* Make iframe scrollable */
-  }
-  iframe {
-    width: 500px;
-    height: 670px;
-    border: none;
-  }
-  .subheading, .join {
-    margin-top: 20px;
-    font-size: 1.2em;
-  }
-  .join a {
-    color: white;
-    text-decoration: underline;
-  }
-  .additional-content {
-    margin-top: 20px;
-    width: 80%; /* Adjust width as needed */
-    overflow-y: auto; /* Allow vertical scrolling */
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <div class="countdown" id="countdown"></div>
-  <div class="iframe-container">
-    <iframe src="https://rxp-messenger.glitch.me/" frameborder="0" preload="auto"></iframe>
-  </div>
-  <div class="subheading">RebornXP is receiving new patches and updates. Until then, why don't you chat with your buddies on Messenger?</div>
-  <div class="join">Or fancy Discord? Join <a href="https://discord.gg/TUVZWcCQHm">here</a>.</div>
-  <div class="additional-content">
+  <head>
+    <title>RebornXP</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <style>
+      body {
+        background-image: url('https://raw.githubusercontent.com/shoaib-jamal/rebornxp/main/static/files/wallpapers/Bliss.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        position: relative;
+      }
+      .window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+      }
 
-   <script async="async" data-cfasync="false" src="//optionsdisk.com/cd00d0678a150f0d40592f970ccfab5c/invoke.js"></script>
-<div id="container-cd00d0678a150f0d40592f970ccfab5c"></div>
-  </div>
-</div>
-
-<script>
-  // Countdown to April 2, 2024, 1:00 AM
-  var countDownDate = new Date("Apr 2, 2024 01:00:00").getTime();
-
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          Welcome to RebornXP
+        </div>
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body" style="
+      font-size: 14px;
+    ">
+        <p>You can experience RebornXP on a brand new URL, <a href="http://rebornxp.ftp.sh" target="_blank">rebornxp.ftp.sh</a>. This current domain may expire soon, so make sure you visit the new URL from now on.</p><p>Вы можете испытать RebornXP по новому URL-адресу <a href="http://rebornxp.ftp.sh" target="_blank">rebornxp.ftp.sh</a>. Срок действия текущего домена может скоро истечь, поэтому обязательно посещайте новый URL-адрес с этого момента.</p><p>Join our <a href="https://discord.gg/TUVZWcCQHm">discord</a> for updates.</p>
+        <div style="text-align: right;">
+          <button class="btn" onclick="window.location.href='http://rebornxp.ftp.sh'">Visit Now</button>
+        </div>
+      </div>
+    </div>
     
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-  }, 1000);
-</script>
-<script type='text/javascript' src='//optionsdisk.com/4b/c3/d0/4bc3d0a4a7bcb5f8c3116e2a5cb7caf1.js'></script>
-</body>
+    <script type='text/javascript' src='//optionsdisk.com/4b/c3/d0/4bc3d0a4a7bcb5f8c3116e2a5cb7caf1.js'></script>
+  </body>
 </html>
