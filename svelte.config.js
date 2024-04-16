@@ -1,13 +1,11 @@
 import preprocess from "svelte-preprocess";
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter(), // Use the adapter-netlify adapter
+    adapter: adapter({ out: 'build' })
     
-    // Optionally, specify other adapter options, such as `out` for the build output directory
-    // adapter: adapter({ out: 'build' })
   },
 
   preprocess: [
