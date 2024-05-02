@@ -738,7 +738,7 @@
     "url": "./programs/webapp.svelte",
     "webapp": {
       "background": "#111827",
-      "url": "https://play-cs.com/en/",
+      "url": "https://deadshot.io/",
       "name": "Counter Strike",
       "icon": "/images/xp/icons/cs16.png"
     },

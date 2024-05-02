@@ -98,13 +98,17 @@
         {
             name: 'Buy me a Coffee',
             icon: 'https://media.giphy.com/media/TDQOtnWgsBx99cNoyH/giphy.gif',
-            link: 'https://www.buymeacoffee.com/shoaibify'
+            newLink: 'https://www.buymeacoffee.com/shoaibify'
         },
-        {
-            name: 'Help and Support',
-            icon: '/images/xp/icons/HelpandSupport.png',
-            link: 'https://xptour.neocities.org/'
-        },
+        
+		
+		{
+    name: 'Discord Community',
+    icon: '/images/xp/icons/discord.png',
+    newLink: 'https://discord.gg/9dFx9kKQS6'
+},
+
+		
         null,
         {
             name: 'Installer',
@@ -112,9 +116,9 @@
             path: './programs/app_installer.svelte'
         },
         {
-            name: 'Search',
-            icon: '/images/xp/icons/Search.png',
-            path: ''
+            name: 'Help and Support',
+            icon: '/images/xp/icons/HelpandSupport.png',
+            link: 'https://xptour.neocities.org/'
         },
         {
             name: 'Run...',
@@ -452,21 +456,23 @@
         }
     }
 
-    function launch(item){
-        console.log(item);
-        let {path, fs_item, webapp, link } = item;
-        if(link){
-            open_link(link);
-
-        } else if(path){
-            queueProgram.set({
-                path, 
-                fs_item,
-                webapp
-            })
-        }
-        hide();
+function launch(item){
+    console.log(item);
+    let { path, fs_item, webapp, link, newLink } = item;
+    if (newLink) {
+        openLinkInNewTab(newLink);
+    } else if (link) {
+        open_link(link);
+    } else if (path) {
+        queueProgram.set({
+            path, 
+            fs_item,
+            webapp
+        })
     }
+    hide();
+}
+
 
     function open_link(link){
         queueProgram.set({
@@ -474,6 +480,10 @@
             fs_item: {url: link}
         })
     }
+	function openLinkInNewTab(newLink) {
+    window.open(newLink, '_blank');
+}
+
 
     async function show_shutdown_panel(){
         const ShutDownPanel = (await import('./shutdown_panel.svelte')).default;
