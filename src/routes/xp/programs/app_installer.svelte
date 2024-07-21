@@ -1,10 +1,9 @@
 <script>
     import Window from '../../../lib/components/xp/Window.svelte';
     import Button from '../../../lib/components/xp/Button.svelte';
-    import { runningPrograms,systemVolume, zIndex, hardDrive, queueProgram } from '../../../lib/store';
+    import { runningPrograms, systemVolume, zIndex, hardDrive, queueProgram } from '../../../lib/store';
     import { desktop_folder, doctypes } from '../../../lib/system';
     import * as fs from '../../../lib/fs';
-    
 
     export let id;
     export let window;
@@ -19,11 +18,32 @@
     let error;
     let installed = false;
     let fs_item_id;
-
-    export async function destroy(){
+    let browser = 'unknown';
+	
+	 export async function destroy(){
         runningPrograms.update(programs => programs.filter(p => p != self));
         self.$destroy();
     }
+
+    function detectBrowser() {
+        const userAgent = navigator.userAgent;
+        if (userAgent.includes('Chrome') || userAgent.includes('CriOS') || userAgent.includes('Edge') || userAgent.includes('Vivaldi') || userAgent.includes('Brave') || userAgent.includes('Opera')) {
+            browser = 'chrome';
+        } else if (userAgent.includes('Firefox')) {
+            browser = 'firefox';
+        }
+    }
+
+    detectBrowser();
+
+ function isValidDomain(domain) {
+        const domainRegex = /^(?:(?:https?:\/\/)?(?:www\.)?[a-z0-9-]+\.[a-z]{2,}|(?:(?:[a-z0-9-]+\.)+[a-z]{2,}))(?:\/[^\s]*)?$/i;
+        const domainWithoutProtocol = domain.replace(/^https?:\/\//i, '');
+        return domainRegex.test(domainWithoutProtocol);
+    }
+
+
+
 
     export let options = {
         title: 'Installer',
@@ -45,25 +65,39 @@
         })
     }
 
-    async function fetch_webapp_info(){
+     async function fetch_webapp_info(){
         error = null;
         fetch_btn.disabled = true;
         fetch_btn.title = 'Fetching'
 
-        fetch('/api/webapp_info', {
-            method: 'GET',
-            headers: {webapp_url}
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
+        try {
+            const response = await fetch('/api/webapp_info', {
+                method: 'GET',
+                headers: {
+                    'webapp_url': webapp_url,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
             webapp = data.webapp;
             fetch_btn.title = ' Fetch ';
             fetch_btn.disabled = false;
-            if(webapp == null){
-                error = {message: `The webapp you requested has the X-Frame-Options header value set, which prevents RebornXP from loading it. In short, you can't install this app on RebornXP.`};
+
+            if(webapp.xframe_restricted){
+                error = {
+                    message: `The webapp you requested has the X-Frame-Options header value set, which prevents RebornXP from loading it. However, you can still use this app on RebornXP by installing the Ignore X-Frame Headers extension.`,
+                    chromeLink: 'https://chromewebstore.google.com/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe',
+                    firefoxLink: 'https://addons.mozilla.org/en-US/firefox/addon/ignore-x-frame-options-header/'
+                };
             }
-        })
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
     }
 
     async function install(){
@@ -108,10 +142,7 @@
         }
         destroy();
     }
-
 </script>
-
-
 
 <Window options={options} bind:this={window} on_click_close={destroy}>
     <div slot="content" class="absolute inset-1 bg-xp-yellow-light">
@@ -121,8 +152,7 @@
                 <p>This installer will help you convert any website into a RebornXP application. Start by entering URL of the website you want to install.</p>
                 <div class="mt-2 flex flex-row">
                     <input bind:value={webapp_url} on:input={() => {webapp = null;error = null}} placeholder="webapp url" class="grow p-1 text-slate-800 mr-2 text-sm">
-                    <Button bind:this={fetch_btn} title=" Fetch " disabled={webapp_url.trim() == ''} on_click={fetch_webapp_info}></Button>
-                </div>
+                    <Button bind:this={fetch_btn} title=" Fetch " disabled={!isValidDomain(webapp_url)} on_click={fetch_webapp_info}></Button>                </div>
                 {#if webapp}
                 <div class="flex flex-row p-2 overflow-hidden my-2">
                     <div class="grow-0 shrink-0 bg-cover bg-no-repeat w-12 h-12 m-1" style:background-image="url({webapp.icon})"></div>
@@ -134,6 +164,14 @@
                 {/if}
                 {#if error}
                     <p class="p-2 text-red-400">{error.message}</p>
+                    {#if browser === 'chrome'}
+                        <p class="p-2 text-blue-400"><a href={error.chromeLink} target="_blank"><u>Click here to install the Ignore X-Frame Headers extension for Chrome-based browsers.</u></a></p>
+                    {:else if browser === 'firefox'}
+                        <p class="p-2 text-blue-400"><a href={error.firefoxLink} target="_blank"><u>Click here to install the Ignore X-Frame Headers extension for Firefox.</u></a></p>
+                    {:else}
+                        <p class="p-2 text-blue-400"><a href={error.chromeLink} target="_blank">Click here to install the Ignore X-Frame Headers extension for Chrome-based browsers.</a></p>
+                        <p class="p-2 text-blue-400"><a href={error.firefoxLink} target="_blank">Click here to install the Ignore X-Frame Headers extension for Firefox.</a></p>
+                    {/if}
                 {/if}
             </div>
             <div class="flex flex-row shrink-0 grow-0 justify-end">
@@ -154,9 +192,6 @@
         </div>
         {/if}
     </div>
-    
 </Window>
 
-
 <svelte:options accessors={true}></svelte:options>
-

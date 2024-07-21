@@ -345,7 +345,7 @@
     }
 
     async function get_url(item){
-        if(item == null) return 'https://search.anasdew.com/';
+        if(item == null) return 'https://www.google.com/';
 
         if(item.storage_type == 'local'){
             return finder.to_url(item.id);

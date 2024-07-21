@@ -20,13 +20,17 @@
 
     let iframe;
     let address_bar;
-    let homepage = url ? url : 'https://search.anasdew.com/';
+    let homepage = url ? url : 'https://www.google.com/';
     let history = [homepage];
-    
+
     let page_index = 0;
     let loading = true;
 
     let real_url;
+	export function destroy(){
+        runningPrograms.update(programs => programs.filter(p => p != self));
+        self.$destroy();
+    }
 
     onMount(async () => {
         real_url = await to_real_url(history[page_index]);
@@ -44,17 +48,17 @@
 
         if(/^[A-Z]:\\/.test(url)){
 
-        } else if(!url.startsWith('https://') && !url.startsWith('http://')){
-            url = 'https://' + url;
-            if(!isURL(url)){
-                url = buildUrl('https://bing.com', {
-                    path: 'search',
-                    queryParams: {
-                        q: address_bar.value.trim()
-                    }
-                })
-            }
-        } 
+    } else if(!url.startsWith('https://') && !url.startsWith('http://')){
+        url = 'https://' + url;
+        if(!isURL(url)){
+            url = buildUrl('https://oldgoogle.neocities.org/2010/search/', {
+                queryParams: {
+                    scope: 'search-site',
+                    q: address_bar.value.trim()
+                }
+            })
+        }
+    }
 
         history = [...history.slice(0, page_index+1), url, ...history.slice(page_index+1)];
         page_index++;
@@ -76,19 +80,21 @@
         loading = false;
     }
 
-    async function to_real_url(url){
-        if(/^[A-Z]:\\/.test(url)){
-            let file = await fs.get_file(finder.to_id(url));
-            return URL.createObjectURL(file);
-        } else {
-            return url;
-        }
+async function to_real_url(url){
+    const inputUrl = new URL(url);
+    if (inputUrl.hostname === 'www.google.com' || inputUrl.hostname === 'google.com') {
+        return '/html/iexplorer/index.html';
+    } else if(/^[A-Z]:\\/.test(url)){
+        let file = await fs.get_file(finder.to_id(url));
+        return URL.createObjectURL(file);
+    } else {
+        return url;
     }
+}
 
-    export function destroy(){
-        runningPrograms.update(programs => programs.filter(p => p != self));
-        self.$destroy();
-    }
+
+
+    
 
     let ws_size = {width: document.querySelector('#work-space').offsetWidth, height: document.querySelector('#work-space').offsetHeight};
 
@@ -121,7 +127,7 @@
                 ]
             ]
         },
-        
+
         {
             name: 'View',
             items: [
@@ -233,14 +239,10 @@
             ]
         }
     ]
-
-
-
-
 </script>
 
 <Window options={options} bind:this={window} on_click_close={destroy}>
-    
+
     <div slot="content" class="absolute inset-1 top-0 flex flex-col bg-xp-yellow">
         <div class="shrink-0 w-full border-b border-stone-300 flex flex-row items-center justify-between">
             <Menu menu={menu}></Menu>
@@ -249,22 +251,22 @@
             </div>
         </div>
         <div class="shrink-0 flex flex-row items-center border-b border-stone-300 overflow-hidden">
-            <RButton icon="/images/xp/icons/Back.png" title="Back" 
+            <RButton icon="/images/xp/icons/Back.png" title="Back"
                     on_click={back}
                     expandable={true} disabled={page_index == 0} tooltip_message="Back to Previous"></RButton>
-            <RButton icon="/images/xp/icons/Forward.png" 
+            <RButton icon="/images/xp/icons/Forward.png"
                     on_click={next}
                     expandable={true} disabled={page_index == history.length-1}></RButton>
 
             <RButton icon="/images/xp/icons/IEStop.png"></RButton>
-            <RButton icon="/images/xp/icons/IERefresh.png" 
+            <RButton icon="/images/xp/icons/IERefresh.png"
                 on_click={() => {
                     var src = iframe.src;
                     iframe.src = src;
                 }}></RButton>
             <RButton icon="/images/xp/icons/IEHome.png"
                 on_click={() => {
-                    address_bar.value = 'https://search.anasdew.com/';
+                    address_bar.value = 'https://www.google.com/';
                     load_page();
                 }}>
             </RButton>
@@ -273,7 +275,7 @@
                 <div class=" w-full h-full border-l border-stone-300"></div>
             </div>
 
-            <RButton icon="/images/xp/icons/Search.png" title="Search" 
+            <RButton icon="/images/xp/icons/Search.png" title="Search"
                 on_click={() => {
                     address_bar.focus();
                     address_bar.select();
@@ -300,15 +302,15 @@
             </div>
             <div on:click={load_page} class="w-[30px] h-[20px] bg-[url(/images/xp/icons/Go.png)] bg-center bg-contain bg-no-repeat"></div>
         </div>
-        
+
         <div class="grow">
             <!-- svelte-ignore a11y-missing-attribute -->
-            <iframe bind:this={iframe} 
-                class="w-full h-full bg-slate-50 {window?.z_index == $zIndex ? 'pointer-events-auto' : 'pointer-events-none'}" 
-                src="{real_url}" 
+            <iframe bind:this={iframe}
+                class="w-full h-full bg-slate-50 {window?.z_index == $zIndex ? 'pointer-events-auto' : 'pointer-events-none'}"
+                src="{real_url}"
                 on:load={(e) => iframe_loaded(e)} frameborder="0">
             </iframe>
-            
+
         </div>
         <div class="bg-xp-yellow h-[20px] shrink-0 flex flex-row justify-between items-center px-2">
             <div class="flex flex-row">
@@ -326,6 +328,5 @@
         </div>
     </div>
 </Window>
-
 
 <svelte:options accessors={true}></svelte:options>

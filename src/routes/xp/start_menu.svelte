@@ -95,13 +95,13 @@
             icon: '/images/xp/icons/DisplayProperties.png',
             path: './programs/display_properties.svelte',
         },
-        {
-            name: 'Buy me a Coffee',
-            icon: 'https://media.giphy.com/media/TDQOtnWgsBx99cNoyH/giphy.gif',
-            newLink: 'https://www.buymeacoffee.com/shoaibify'
+
+         {
+            name: 'Installer',
+            icon: '/images/xp/icons/Programs.png',
+            path: './programs/app_installer.svelte'
         },
-        
-		
+		  null,
 		{
     name: 'Discord Community',
     icon: '/images/xp/icons/discord.png',
@@ -109,12 +109,8 @@
 },
 
 		
-        null,
-        {
-            name: 'Installer',
-            icon: '/images/xp/icons/Programs.png',
-            path: './programs/app_installer.svelte'
-        },
+      
+       
         {
             name: 'Help and Support',
             icon: '/images/xp/icons/HelpandSupport.png',

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-links {
+    margin-bottom: 1rem;
+}
+
+#nav-links>a {
+    background-color: #efefef;
+    color: blue;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+#nav-links>a:first-child {
+    background-color: blue;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+footer > p{
+    margin: 15px;
+    font-size: 10px;
+}
+
+#video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#video-container iframe {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+</style>
+<title>Nostalgia Google - Let's live the history</title>
+</head>
+<body>
+<main id="main-content">
+    <img src="logo.gif" alt="Google">
+    <p style="font-size: xx-small;">Google and the Google logo are trademarks of Google LLC.</p>
+    <div id="nav-links">
+        <a href="#">Web</a>
+        <a href="https://oldgoogle.neocities.org/2010/imghp/">Images</a>
+        <a href="https://oldgoogle.neocities.org/2010/videohp/">Videos</a>
+    </div>
+
+    <form action="https://oldgoogle.neocities.org/2010/search/" method="get" name="f">
+        <input required="" style="width: 100%;" maxlength="256" size="55" name="q" placeholder="Search">
+        <div style="margin-top: 1rem;">
+            <input type="submit" value="Google Search">
+            <input style="display: none;" name="page" value="1" type="text">
+            <button type="button" id="lucky-button">I'm Feeling Lucky</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>© 2001 Google</p>
+        <p>Searching Billions of Web Pages</p>
+    </footer>
+
+    <div id="video-container">
+        <button id="close-button">Close</button>
+        <iframe width="1106" height="622" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rick Rolled" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentYear = new Date().getFullYear();
+            document.querySelector('footer p').textContent = `\u00A9 ${currentYear} Google`;
+            
+            const luckyButton = document.getElementById('lucky-button');
+            const videoContainer = document.getElementById('video-container');
+            const closeButton = document.getElementById('close-button');
+            
+            luckyButton.addEventListener('click', () => {
+                videoContainer.style.display = 'flex';
+            });
+            
+            closeButton.addEventListener('click', () => {
+                videoContainer.style.display = 'none';
+            });
+        });
+    </script>
+</main>
+</body>
+</html>
