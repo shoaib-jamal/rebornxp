@@ -10,7 +10,7 @@
     function on_dbclick(){
         let fs_item = $hardDrive[recycle_bin_id];
         queueProgram.set({
-            path: './programs/my_computer.svelte',
+            path: './programs/my_computer/+page.svelte',
             fs_item: fs_item
         })
     }

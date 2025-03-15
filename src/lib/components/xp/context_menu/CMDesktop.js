@@ -136,7 +136,7 @@ export let make = ({type, originator}) => {
                         queueProgram.set({
                             name: 'Display Properties',
                             icon: 'DisplayProperties.png',
-                            path: './programs/display_properties.svelte'
+                            path: './programs/display_properties/+page.svelte',
                         })
                     }
                 }

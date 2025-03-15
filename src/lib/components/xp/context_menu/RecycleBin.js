@@ -17,7 +17,7 @@ export let make = ({type, originator}) => {
                     action: () => {
                         let fs_item = get(hardDrive)[recycle_bin_id];
                         queueProgram.set({
-                            path: './programs/my_computer.svelte',
+                            path: './programs/my_computer/+page.svelte',
                             fs_item: fs_item
                         })
                     },
@@ -49,7 +49,7 @@ export let make = ({type, originator}) => {
                     name: 'Properties',
                     action: () => {
                         // queueProgram.set({
-                        //     path: './programs/properties.svelte',
+                        //     path: './programs/properties/+page.svelte',
                         //     fs_item: originator.item
                         // })
                     }

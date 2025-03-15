@@ -113,59 +113,59 @@ export let hidden_items = [recycle_bin_id,desktop_folder, wallpapers_folder];
 export let supported_wallpaper_filetypes = ['.jpg', '.jpeg', '.png', '.webp'];
 
 let image_viewer = {
-  path: './programs/image_viewer.svelte',
+  path: './programs/image_viewer/+page.svelte',
   icon: '/images/xp/icons/WindowsPictureandFaxViewer.png',
   name: 'Image Viewer'
 }
 
 let paint_program = {
-  path: './programs/paint.svelte',
+  path: './programs/paint/+page.svelte',
   icon: '/images/xp/icons/Paint.png',
   name: 'Paint'
 }
 let photon_program = {
-  path: './programs/photon.svelte',
+  path: './programs/photon/+page.svelte',
   icon: '/images/xp/icons/Photon.png',
   name: 'Photon Editor'
 }
 let mpc_program = {
-  path: './programs/media_player_classic.svelte',
+  path: './programs/media_player_classic/+page.svelte',
   icon: '/images/xp/icons/MPC.png',
   name: 'Media Player Classic'
 }
 let foxit_reader_program = {
-  path: './programs/foxit_reader.svelte',
+  path: './programs/foxit_reader/+page.svelte',
   icon: '/images/xp/icons/PDF.png',
   name: 'Foxit Reader'
 }
 let msword_program = {
-  path: './programs/microsoft_word.svelte',
+  path: './programs/microsoft_word/+page.svelte',
   icon: '/images/xp/icons/DOC.png',
   name: 'Microsoft Word 2003'
 }
 let koodo_program = {
-  path: './programs/koodo.svelte',
+  path: './programs/koodo/+page.svelte',
   icon: '/images/xp/icons/Koodo.png',
   name: 'Koodo Reader'
 }
 let notepad_program = {
-  path: './programs/notepad.svelte',
+  path: './programs/notepad/+page.svelte',
   icon: '/images/xp/icons/Notepad.png',
   name: 'Notepad'
 }
 let ie_program = {
-  path: './programs/internet_explorer.svelte',
+  path: './programs/internet_explorer/+page.svelte',
   icon: '/images/xp/icons/InternetExplorer6.png',
   name: 'Microsoft Internet Explorer'
 }
 let winrar_program = {
-  path: './programs/winrar.svelte',
+  path: './programs/winrar/+page.svelte',
   icon: '/images/xp/icons/RAR.png',
   name: 'WinRAR'
 }
 
 let flash_player_program = {
-  path: './programs/flash_player.svelte',
+  path: './programs/flash_player/+page.svelte',
   icon: '/images/xp/icons/FlashPlayer.png',
   name: 'Flash Player'
 }

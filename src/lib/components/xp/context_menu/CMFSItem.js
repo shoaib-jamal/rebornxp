@@ -61,7 +61,7 @@ export let make = ({type, originator}) => {
                         icon: '/images/xp/icons/RAR.png',
                         action: () => {
                             queueProgram.set({
-                                path: './programs/winrar.svelte',
+                                path: './programs/winrar/+page.svelte',
                                 fs_item: originator.item
                             })
                         }
@@ -73,7 +73,7 @@ export let make = ({type, originator}) => {
                         icon: '/images/xp/icons/RAR.png',
                         action: () => {
                             queueProgram.set({
-                                path: './programs/zip.svelte',
+                                path: './programs/zip/+page.svelte',
                                 fs_item: originator.item
                             })
                         }
@@ -102,7 +102,7 @@ export let make = ({type, originator}) => {
                                 icon: '/images/xp/icons/Zipfolder.png',
                                 action: () => {
                                     queueProgram.set({
-                                        path: './programs/zip.svelte',
+                                        path: './programs/zip/+page.svelte',
                                         fs_item: originator.item
                                     })
                                 }
@@ -217,12 +217,12 @@ export let make = ({type, originator}) => {
                     action: () => {
                         if(originator.item.type == 'drive' || originator.item.type == 'removable_storage'){
                             queueProgram.set({
-                                path: './programs/disk_properties.svelte',
+                                path: './programs/disk_properties/+page.svelte',
                                 fs_item: originator.item
                             })
                         } else {
                             queueProgram.set({
-                                path: './programs/properties.svelte',
+                                path: './programs/properties/+page.svelte',
                                 fs_item: originator.item
                             })
                         }
